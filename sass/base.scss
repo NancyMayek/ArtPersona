@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 $background-gradient:linear-gradient(180deg, rgba(94,56,249,1) 0%, rgba(232,117,251,1) 45%, rgba(231,217,255,1) 100%);
 $logo_width: 9rem;
 $font_Nivala: 'Poppins', sans-serif;
+$font_Roboto: 'Roboto', sans-serif;
+$color_hotpink:#F94F46;
 
 body{
     background: $background-gradient;
@@ -80,6 +83,45 @@ header{
     }
 }
 
+#banner_de_inicio{
+    display: flex;
+    justify-content: center;
+    div{
+        margin-top: 3rem;
+        img{
+            width: 30rem;
+        }
+    }
+    #mensaje_banner{
+        margin-left: 5rem;
+        margin-top: 6rem;
+        h1{
+            font-family: $font_Roboto;
+            font-size: 3.5rem;
+            color: white;
+        }
+        h2{
+            font-family: $font_Roboto;
+            font-size: 1rem;
+            color: white;
+        }
+        #btn_banner{
+            background-color: $color_hotpink ;
+            width: 10rem;
+            height: 3rem;
+            border-radius: 100rem;
+            a{
+                position:absolute;
+                margin-top: .3rem;
+                margin-left:2rem;
+                #bt_h2{
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1340px) { //LARGE
     header{  
         #logo{
@@ -89,7 +131,7 @@ header{
 }
 
 
-@media screen and (max-width: 1220px) { //LARGE
+@media screen and (max-width: 1220px) { //IPADS
     header{
     
         #logo{
@@ -113,6 +155,45 @@ header{
         }
     
     }
+
+    #banner_de_inicio{
+        div{
+            margin-top: 6rem;
+            img{
+                width: 25rem;
+            }
+        }
+        #mensaje_banner{
+            margin-left: 1rem;
+            margin-top: 8rem;
+            h1{
+                font-family: $font_Roboto;
+                font-size: 3.5rem;
+                color: white;
+            }
+            h2{
+                font-family: $font_Roboto;
+                font-size: 1rem;
+                color: white;
+            }
+            #btn_banner{
+                margin-top: 3rem;
+                background-color: $color_hotpink ;
+                width: 10rem;
+                height: 3rem;
+                border-radius: 100rem;
+                a{
+                    position:absolute;
+                    margin-top: .3rem;
+                    margin-left:2rem;
+                    #bt_h2{
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 @media screen and (max-width: 870px) { //LARGE
@@ -122,6 +203,43 @@ header{
             margin-right:  5rem;
             margin-left: 2rem;
         } 
+    }
+
+    #banner_de_inicio{
+        div{
+            img{
+                width: 20rem;
+            }
+        }
+        #mensaje_banner{
+            margin-left: 1rem;
+            margin-top: 7rem;
+            h1{
+                font-family: $font_Roboto;
+                font-size: 2.8rem;
+                color: white;
+            }
+            h2{
+                font-family: $font_Roboto;
+                font-size: .8rem;
+                color: white;
+            }
+            #btn_banner{
+                margin-top: 2rem;
+                background-color: $color_hotpink ;
+                width: 10rem;
+                height: 3rem;
+                border-radius: 100rem;
+                a{
+                    position:absolute;
+                    margin-top: .3rem;
+                    margin-left:2rem;
+                    #bt_h2{
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -188,6 +306,49 @@ header{
             
         }
     }
+
+    #banner_de_inicio{
+        flex-direction: column-reverse;
+        align-items: center;
+        div{
+            margin-top: 0rem;
+            img{
+                width: 25rem;
+            }
+        }
+        #mensaje_banner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 1rem;
+            margin-top: 5rem;
+            h1{
+                font-family: $font_Roboto;
+                text-align: center;
+                font-size: 3rem;
+                color: white;
+            }
+            #msg{
+                display: none;
+            }
+            #btn_banner{
+                
+                margin-top: 1rem;
+                background-color: $color_hotpink ;
+                width: 10rem;
+                height: 3rem;
+                border-radius: 100rem;
+                a{
+                    position:absolute;
+                    margin-top: .3rem;
+                    margin-left:2rem;
+                    #bt_h2{
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 540px) { //LARGE
@@ -242,6 +403,24 @@ header{
                 }
             }
             
+        }
+    }
+
+    #banner_de_inicio{
+     
+        div{
+            margin-top: 0rem;
+            img{
+                width: 15rem;
+            }
+        }
+        #mensaje_banner{
+            margin-left: 1rem;
+            margin-top: 5rem;
+            h1{         
+                font-size: 2rem;
+            }
+         
         }
     }
 }
@@ -303,6 +482,24 @@ header{
                 }
             }
             
+        }
+    }
+
+    #banner_de_inicio{
+     
+        div{
+            margin-top: 0rem;
+            img{
+                width: 15rem;
+            }
+        }
+        #mensaje_banner{
+            margin-left: 1rem;
+            margin-top: 5rem;
+            h1{         
+                font-size: 2rem;
+            }
+         
         }
     }
 }

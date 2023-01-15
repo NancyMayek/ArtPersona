@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 body {
   background: linear-gradient(180deg, rgb(94, 56, 249) 0%, rgb(232, 117, 251) 45%, rgb(231, 217, 255) 100%);
   background-attachment: fixed;
@@ -66,6 +67,45 @@ header #user_nav div img {
   width: 2.7rem;
 }
 
+#banner_de_inicio {
+  display: flex;
+  justify-content: center;
+}
+#banner_de_inicio div {
+  margin-top: 3rem;
+}
+#banner_de_inicio div img {
+  width: 30rem;
+}
+#banner_de_inicio #mensaje_banner {
+  margin-left: 5rem;
+  margin-top: 6rem;
+}
+#banner_de_inicio #mensaje_banner h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3.5rem;
+  color: white;
+}
+#banner_de_inicio #mensaje_banner h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+#banner_de_inicio #mensaje_banner #btn_banner {
+  background-color: #F94F46;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 100rem;
+}
+#banner_de_inicio #mensaje_banner #btn_banner a {
+  position: absolute;
+  margin-top: 0.3rem;
+  margin-left: 2rem;
+}
+#banner_de_inicio #mensaje_banner #btn_banner a #bt_h2 {
+  font-size: 0.8rem;
+}
+
 @media screen and (max-width: 1340px) {
   header #logo {
     margin-right: 2rem;
@@ -87,11 +127,78 @@ header #user_nav div img {
     margin-right: 2rem;
     margin-left: 2rem;
   }
+  #banner_de_inicio div {
+    margin-top: 6rem;
+  }
+  #banner_de_inicio div img {
+    width: 25rem;
+  }
+  #banner_de_inicio #mensaje_banner {
+    margin-left: 1rem;
+    margin-top: 8rem;
+  }
+  #banner_de_inicio #mensaje_banner h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 3.5rem;
+    color: white;
+  }
+  #banner_de_inicio #mensaje_banner h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: white;
+  }
+  #banner_de_inicio #mensaje_banner #btn_banner {
+    margin-top: 3rem;
+    background-color: #F94F46;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 100rem;
+  }
+  #banner_de_inicio #mensaje_banner #btn_banner a {
+    position: absolute;
+    margin-top: 0.3rem;
+    margin-left: 2rem;
+  }
+  #banner_de_inicio #mensaje_banner #btn_banner a #bt_h2 {
+    font-size: 0.8rem;
+  }
 }
 @media screen and (max-width: 870px) {
   header #logo {
     margin-right: 5rem;
     margin-left: 2rem;
+  }
+  #banner_de_inicio div img {
+    width: 20rem;
+  }
+  #banner_de_inicio #mensaje_banner {
+    margin-left: 1rem;
+    margin-top: 7rem;
+  }
+  #banner_de_inicio #mensaje_banner h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.8rem;
+    color: white;
+  }
+  #banner_de_inicio #mensaje_banner h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+    color: white;
+  }
+  #banner_de_inicio #mensaje_banner #btn_banner {
+    margin-top: 2rem;
+    background-color: #F94F46;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 100rem;
+  }
+  #banner_de_inicio #mensaje_banner #btn_banner a {
+    position: absolute;
+    margin-top: 0.3rem;
+    margin-left: 2rem;
+  }
+  #banner_de_inicio #mensaje_banner #btn_banner a #bt_h2 {
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 750px) {
@@ -139,6 +246,47 @@ header #user_nav div img {
     width: 2.4rem;
     height: 2.4rem;
   }
+  #banner_de_inicio {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #banner_de_inicio div {
+    margin-top: 0rem;
+  }
+  #banner_de_inicio div img {
+    width: 25rem;
+  }
+  #banner_de_inicio #mensaje_banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1rem;
+    margin-top: 5rem;
+  }
+  #banner_de_inicio #mensaje_banner h1 {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+  }
+  #banner_de_inicio #mensaje_banner #msg {
+    display: none;
+  }
+  #banner_de_inicio #mensaje_banner #btn_banner {
+    margin-top: 1rem;
+    background-color: #F94F46;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 100rem;
+  }
+  #banner_de_inicio #mensaje_banner #btn_banner a {
+    position: absolute;
+    margin-top: 0.3rem;
+    margin-left: 2rem;
+  }
+  #banner_de_inicio #mensaje_banner #btn_banner a #bt_h2 {
+    font-size: 0.8rem;
+  }
 }
 @media screen and (max-width: 540px) {
   header #logo {
@@ -172,6 +320,19 @@ header #user_nav div img {
     margin-left: 0.3rem;
     width: 2rem;
     height: 2rem;
+  }
+  #banner_de_inicio div {
+    margin-top: 0rem;
+  }
+  #banner_de_inicio div img {
+    width: 15rem;
+  }
+  #banner_de_inicio #mensaje_banner {
+    margin-left: 1rem;
+    margin-top: 5rem;
+  }
+  #banner_de_inicio #mensaje_banner h1 {
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 420px) {
@@ -209,6 +370,19 @@ header #user_nav div img {
     margin-left: 0.2rem;
     width: 1.5rem;
     height: 1.5rem;
+  }
+  #banner_de_inicio div {
+    margin-top: 0rem;
+  }
+  #banner_de_inicio div img {
+    width: 15rem;
+  }
+  #banner_de_inicio #mensaje_banner {
+    margin-left: 1rem;
+    margin-top: 5rem;
+  }
+  #banner_de_inicio #mensaje_banner h1 {
+    font-size: 2rem;
   }
 }
 
