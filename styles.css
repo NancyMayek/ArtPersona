@@ -37,7 +37,7 @@ header #user_nav {
 header #user_nav #search_bar {
   border-radius: 28px;
   border-style: none;
-  background-color: #fbd2cf;
+  background-color: #fffefe;
   width: 20rem;
   height: 2.4rem;
   display: flex;
@@ -66,119 +66,12 @@ header #user_nav div img {
   width: 2.7rem;
 }
 
-@media screen and (max-width: 1500px) {
-  header {
-    display: flex;
-    justify-content: center;
-  }
-  header #logo {
-    margin-right: 5rem;
-  }
-  header #link_nav {
-    margin-right: 10rem;
-  }
-  header #link_nav ul {
-    display: flex;
-  }
-  header #link_nav ul li {
-    margin-right: 2rem;
-    font-size: 0.875em;
-  }
-  header #user_nav #search_bar {
-    width: 20rem;
-    display: flex;
-    justify-content: center;
-    margin-right: 1rem;
-  }
-  header #user_nav #search_bar input {
-    width: 17rem;
-  }
-  header #user_nav #search_bar img {
-    width: 1.2rem;
-    height: 1.2rem;
-  }
-  header #user_nav div img {
-    width: 2.7rem;
-  }
-}
-@media screen and (max-width: 1300px) {
-  header {
-    display: flex;
-    justify-content: center;
-  }
+@media screen and (max-width: 1340px) {
   header #logo {
     margin-right: 2rem;
   }
-  header #link_nav {
-    margin-right: 1rem;
-  }
-  header #link_nav ul {
-    display: flex;
-  }
-  header #link_nav ul li {
-    margin-right: 1rem;
-    font-size: 0.875em;
-  }
-  header #user_nav #search_bar {
-    width: 15rem;
-    display: flex;
-    justify-content: center;
-    margin-right: 1rem;
-  }
-  header #user_nav #search_bar input {
-    width: 10rem;
-  }
-  header #user_nav #search_bar img {
-    width: 1.2rem;
-    height: 1.2rem;
-  }
-  header #user_nav div img {
-    margin-left: 0.5rem;
-    width: 2.7rem;
-  }
 }
-@media screen and (max-width: 1000px) {
-  header {
-    display: flex;
-    justify-content: center;
-  }
-  header #logo {
-    margin-left: 2rem;
-  }
-  header #link_nav {
-    margin-right: 0.5rem;
-    margin-left: -2rem;
-  }
-  header #link_nav ul {
-    display: flex;
-  }
-  header #link_nav ul li {
-    margin-right: 1rem;
-    font-size: 0.875em;
-  }
-  header #user_nav #search_bar {
-    width: 15rem;
-    display: flex;
-    justify-content: center;
-    margin-right: 1rem;
-  }
-  header #user_nav #search_bar input {
-    width: 10rem;
-  }
-  header #user_nav #search_bar img {
-    width: 1.2rem;
-    height: 1.2rem;
-  }
-  header #user_nav div img {
-    margin-left: 0.5rem;
-    width: 2.7rem;
-  }
-}
-@media screen and (max-width: 960px) {
-  header {
-    display: flex;
-    justify-content: center;
-  }
+@media screen and (max-width: 1220px) {
   header #logo {
     margin-right: 15rem;
     margin-left: 2rem;
@@ -190,101 +83,24 @@ header #user_nav div img {
     order: 3;
     position: absolute;
   }
-  header #link_nav ul {
-    display: flex;
-  }
   header #link_nav ul li {
     margin-right: 2rem;
     margin-left: 2rem;
-    font-size: 0.875em;
-  }
-  header #user_nav #search_bar {
-    width: 18rem;
-    display: flex;
-    justify-content: center;
-    margin-right: 1rem;
-  }
-  header #user_nav #search_bar input {
-    margin-right: 1rem;
-    margin-right: 3rem;
-    width: 10rem;
-  }
-  header #user_nav #search_bar img {
-    width: 1.2rem;
-    height: 1.2rem;
-  }
-  header #user_nav div img {
-    margin-left: 0.5rem;
-    width: 2.7rem;
   }
 }
-@media screen and (max-width: 850px) {
-  header {
-    display: flex;
-    justify-content: center;
-  }
+@media screen and (max-width: 870px) {
   header #logo {
     margin-right: 5rem;
     margin-left: 2rem;
   }
-  header #link_nav {
-    margin-right: 0.5rem;
-    margin-left: 0rem;
-    margin-top: 4rem;
-    order: 3;
-    position: absolute;
-  }
-  header #link_nav ul {
-    display: flex;
-  }
-  header #link_nav ul li {
-    margin-right: 2rem;
-    margin-left: 2rem;
-    font-size: 0.875em;
-  }
-  header #user_nav #search_bar {
-    width: 15rem;
-    display: flex;
-    justify-content: center;
-    margin-right: 1rem;
-  }
-  header #user_nav #search_bar input {
-    margin-right: 1rem;
-    width: 10rem;
-  }
-  header #user_nav #search_bar img {
-    width: 1.2rem;
-    height: 1.2rem;
-  }
-  header #user_nav div img {
-    margin-left: 0.5rem;
-    width: 2.7rem;
-  }
 }
-@media screen and (max-width: 670px) {
-  header {
-    display: flex;
-    justify-content: center;
-  }
+@media screen and (max-width: 750px) {
   header #logo {
     margin-top: 2rem;
     margin-right: 10rem;
   }
   header #link_nav {
     display: none;
-    margin-right: 0.5rem;
-    margin-left: 0rem;
-    margin-top: 4rem;
-    order: 3;
-    position: absolute;
-  }
-  header #link_nav ul {
-    display: flex;
-  }
-  header #link_nav ul li {
-    margin-right: 2rem;
-    margin-left: 2rem;
-    font-size: 0.875em;
   }
   header #user_nav #search_bar {
     order: 3;
@@ -325,10 +141,6 @@ header #user_nav div img {
   }
 }
 @media screen and (max-width: 540px) {
-  header {
-    display: flex;
-    justify-content: center;
-  }
   header #logo {
     margin-top: 2.5rem;
     margin-right: 6rem;
@@ -336,42 +148,15 @@ header #user_nav div img {
   header #logo img {
     width: 7rem;
   }
-  header #link_nav {
-    display: none;
-    margin-right: 0.5rem;
-    margin-left: 0rem;
-    margin-top: 4rem;
-    order: 3;
-    position: absolute;
-  }
-  header #link_nav ul {
-    display: flex;
-  }
-  header #link_nav ul li {
-    margin-right: 2rem;
-    margin-left: 2rem;
-    font-size: 0.875em;
-  }
   header #user_nav #search_bar {
-    position: absolute;
-    margin-top: 4rem;
     width: 21rem;
     display: flex;
     justify-content: center;
     margin-right: -0.5rem;
   }
   header #user_nav #search_bar input {
-    margin-right: 6rem;
+    margin-right: 5rem;
     width: 10rem;
-  }
-  header #user_nav #search_bar img {
-    margin-left: 3rem;
-    margin-top: 0rem;
-    width: 1.2rem;
-    height: 1.2rem;
-  }
-  header #user_nav div {
-    display: flex;
   }
   header #user_nav div #menu {
     display: block;
@@ -390,40 +175,17 @@ header #user_nav div img {
   }
 }
 @media screen and (max-width: 420px) {
-  header {
-    display: flex;
-    justify-content: center;
-  }
   header #logo {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     margin-right: 4rem;
     margin-left: -1rem;
   }
   header #logo img {
     width: 5.5rem;
   }
-  header #link_nav {
-    display: none;
-    margin-right: 0.5rem;
-    margin-left: 0rem;
-    margin-top: 4rem;
-    order: 3;
-    position: absolute;
-  }
-  header #link_nav ul {
-    display: flex;
-  }
-  header #link_nav ul li {
-    margin-right: 2rem;
-    margin-left: 2rem;
-    font-size: 0.875em;
-  }
   header #user_nav #search_bar {
-    position: absolute;
     margin-top: 2rem;
     width: 15rem;
-    display: flex;
-    justify-content: center;
     margin-right: -0.5rem;
   }
   header #user_nav #search_bar input {
@@ -436,12 +198,6 @@ header #user_nav div img {
     width: 1rem;
     height: 1rem;
   }
-  header #user_nav div {
-    display: flex;
-  }
-  header #user_nav div #menu {
-    display: block;
-  }
   header #user_nav div #menu img {
     width: 1.1rem;
     height: 1.1rem;
@@ -449,7 +205,7 @@ header #user_nav div img {
     margin-right: 0.5rem;
   }
   header #user_nav div img {
-    margin-top: -0.6rem;
+    margin-top: -0.5rem;
     margin-left: 0.2rem;
     width: 1.5rem;
     height: 1.5rem;
