@@ -1,3 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+$background-gradient:linear-gradient(180deg, rgba(94,56,249,1) 0%, rgba(232,117,251,1) 45%, rgba(231,217,255,1) 100%);
+$logo_width: 9rem;
+$font_Nivala: 'Poppins', sans-serif;
+
 body{
-    background-color: aqua;
+    background: $background-gradient;
+    background-attachment: fixed; 
+}
+
+header{
+    display: flex;
+    justify-content: center;
+
+    #logo{
+        margin-top: 1.5rem;
+        margin-right: 10rem;
+        img{
+            width: $logo_width;
+        }
+    }
+
+    #link_nav{
+        margin-top: 1rem;
+        margin-right: 10rem;
+       ul{
+        display: flex;
+        list-style: none;
+        li{
+            margin-right: 2rem;
+            font-family: $font_Nivala;
+            color: white;
+            font-size: 0.875em;
+        }
+       }
+    }
+
+    #user_nav{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2.3rem;
+        #search_bar{
+            border-radius: 28px;
+            border-style: none;
+            background-color: #fbd2cf;
+            width: 20rem;
+            height: 2.4rem;
+            display: flex;
+            justify-content: center;
+            margin-right: 1rem;
+            margin-top: .2rem;
+            
+            input{
+                height:1.2rem ;
+                width: 17rem;
+                font-size: 16px;
+                background: transparent;
+                border: 0;
+                outline: none;
+                padding-top: .6rem;
+            }
+            img{
+                padding-top: .6rem;
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+
+        div{
+            img{
+                width: 2.7rem;
+            }
+        }
+        
+    }
 }

@@ -1,5 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
 body {
-  background-color: aqua;
+  background: linear-gradient(180deg, rgb(94, 56, 249) 0%, rgb(232, 117, 251) 45%, rgb(231, 217, 255) 100%);
+  background-attachment: fixed;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header #logo {
+  margin-top: 1.5rem;
+  margin-right: 10rem;
+}
+header #logo img {
+  width: 9rem;
+}
+header #link_nav {
+  margin-top: 1rem;
+  margin-right: 10rem;
+}
+header #link_nav ul {
+  display: flex;
+  list-style: none;
+}
+header #link_nav ul li {
+  margin-right: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 0.875em;
+}
+header #user_nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2.3rem;
+}
+header #user_nav #search_bar {
+  border-radius: 28px;
+  border-style: none;
+  background-color: #fbd2cf;
+  width: 20rem;
+  height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  margin-right: 1rem;
+  margin-top: 0.2rem;
+}
+header #user_nav #search_bar input {
+  height: 1.2rem;
+  width: 17rem;
+  font-size: 16px;
+  background: transparent;
+  border: 0;
+  outline: none;
+  padding-top: 0.6rem;
+}
+header #user_nav #search_bar img {
+  padding-top: 0.6rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+header #user_nav div img {
+  width: 2.7rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
