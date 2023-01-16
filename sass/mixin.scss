@@ -1,0 +1,14 @@
+@mixin btnPrimario($colorfondo,$ancho,$fontSize){
+    background-color: $colorfondo ;
+    width: $ancho;
+    height: 3rem;
+    border-radius: 100rem;
+            a{
+                position:absolute;
+                margin-top: .3rem;
+                margin-left:2rem;
+                #bt_h2{
+                    font-size: $fontSize;
+                }
+            }
+}

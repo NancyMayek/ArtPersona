@@ -21,11 +21,11 @@ header #link_nav {
   margin-top: 1rem;
   margin-right: 10rem;
 }
-header #link_nav ul {
+header #link_nav .links, header footer #footer_link #link_nav ul, footer #footer_link header #link_nav ul {
   display: flex;
   list-style: none;
 }
-header #link_nav ul li {
+header #link_nav .links li, header footer #footer_link #link_nav ul li, footer #footer_link header #link_nav ul li {
   margin-right: 2rem;
   font-family: "Roboto", sans-serif;
   color: white;
@@ -184,6 +184,10 @@ header #user_nav div img {
   margin-right: 4rem;
 }
 
+footer .links, footer #footer_link #link_nav ul {
+  display: flex;
+  list-style: none;
+}
 footer #footer_link {
   margin-top: 5rem;
   display: flex;
@@ -197,8 +201,6 @@ footer #footer_link #link_nav {
 }
 footer #footer_link #link_nav ul {
   margin-top: 1rem;
-  display: flex;
-  list-style: none;
 }
 footer #footer_link #link_nav ul li {
   margin-left: 5rem;
