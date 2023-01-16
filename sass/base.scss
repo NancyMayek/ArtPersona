@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200&display=swap');
 
 $background-gradient:linear-gradient( rgba(94,56,249,1) 0%, rgba(232,117,251,1) 45%, rgba(231,217,255,1) 100%);
+$background-gradient2:linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+$background-lightcolor: #FFFDED;
+$color_searchbar:#FADDDD;
 $logo_width: 8rem;
 $font_Urbanist:  'Urbanist', sans-serif;
 $font_Nivala: 'Poppins', sans-serif;
@@ -34,7 +37,7 @@ header{
         list-style: none;
         li{
             margin-right: 2rem;
-            font-family: $font_Nivala;
+            font-family: $font_Roboto;
             color: white;
             font-size: 0.875em;
         }
@@ -48,7 +51,7 @@ header{
         #search_bar{
             border-radius: 28px;
             border-style: none;
-            background-color: #fffefe;
+            background-color:$color_searchbar;
             width: 20rem;
             height: 2.4rem;
             display: flex;
@@ -210,10 +213,51 @@ header{
             }
         }
         
+    }  
+}
 
+footer{
+    #footer_link{
+        margin-top:5rem;
+        display: flex;
+        justify-content: center;
+        #logo{
+            img{
+                width: 9rem;
+            }
+        }
+        #link_nav{
+            margin-right: 5rem;
+            ul{
+                margin-top: 1rem;
+                display: flex;
+                list-style: none;
+                li{
+                    h4{
+                        font-family: $font_Roboto;
+                    }
+                    margin-left: 5rem;
+                }
+            }
+        }
     }
 
-    
+    #final{
+        display: flex;
+        justify-content: center;
+        h4{
+            font-family: $font_Roboto;
+        }
+        div{
+            margin-left: 10rem;
+            display: flex;
+            img{
+                margin-top: .5rem;
+                margin-left: 2rem;
+                width: 2.5rem;
+            }
+        }
+    }
 }
 
 
@@ -304,15 +348,34 @@ header{
                     margin-right: 1rem;
                 }
             }
+              
+        }
+          
+    }
+
+    footer{
+        #footer_link{
             
-    
+            
+            #link_nav{
+                margin-right: 0rem;
+                ul{
+                    margin-top: 1rem;
+                    display: flex;
+                    list-style: none;
+                    li{
+                        h4{
+                            font-family: $font_Roboto;
+                        }
+                        margin-left: 2rem;
+                    }
+                }
+            }
         }
     
-        
     }
     
-    
-    
+        
 }
 
 @media screen and (max-width: 870px) { //LARGE
@@ -552,6 +615,46 @@ header{
     
         
     }
+
+    footer{
+        #footer_link{
+            
+            
+            #link_nav{
+                margin-right: 0rem;
+                ul{
+                    margin-top: 1.4rem;
+                    display: flex;
+                    list-style: none;
+                    li{
+                        h4{
+                            font-family: $font_Roboto;
+                            font-size: .9rem;
+                        }
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+        
+    #final{
+        display: flex;
+        justify-content: center;
+        h4{
+            font-family: $font_Roboto;
+        }
+        div{
+            margin-left: 5rem;
+            display: flex;
+            img{
+                margin-top: .5rem;
+                margin-left: 1rem;
+                width: 2.5rem;
+            }
+        }
+    }
+    
+    }
     
 }
 
@@ -674,6 +777,41 @@ header{
         }
     
         
+    }
+
+    footer{
+        
+        #footer_link{
+
+            flex-direction: column;
+            align-items: center;
+            h4{
+                display: none;
+            }
+                     
+        }
+        
+    #final{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: -2rem;
+        h4{
+            text-align: center;
+            font-family: $font_Roboto;
+        }
+        div{
+            margin-left: 0rem;
+            display: flex;
+            
+            img{
+                margin-top: .5rem;
+                margin: 1rem;
+                width: 2.5rem;
+            }
+        }
+    }
+    
     }
 }
 
