@@ -511,6 +511,14 @@ footer #final div img {
   header #user_nav #search_bar {
     display: none;
   }
+  header #user_nav div #menu {
+    display: flex;
+  }
+  header #user_nav div #menu img {
+    margin-top: 0.3rem;
+    width: 2rem;
+    height: 2rem;
+  }
   #link_nav_2 {
     height: 4rem;
     padding-left: 2rem;

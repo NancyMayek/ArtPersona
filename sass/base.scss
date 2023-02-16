@@ -369,6 +369,9 @@ footer{
         }
 
         
+           
+        
+        
     
     }
 
@@ -667,7 +670,23 @@ header{
         #search_bar{
             display: none;
         }
+
+        div{       
+            
+            #menu{
+                display: flex;
+                img{
+                    margin-top: .3rem;
+                    width: 2rem;
+                    height: 2rem;
+                }
+               
+            }
+            
+        }
+        
     }
+
 }
 
 #link_nav_2{
