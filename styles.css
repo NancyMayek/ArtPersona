@@ -312,11 +312,11 @@ footer #final div img {
     display: flex;
     flex-direction: column;
   }
-  #link_nav_2 .links_2 {
+  #link_nav_2 #links_2 {
     display: flex;
     justify-content: space-around;
   }
-  #link_nav_2 .links_2 a {
+  #link_nav_2 #links_2 a {
     font-family: "Poppins", sans-serif;
     color: rgb(61, 61, 61);
     font-size: 0.9rem;
@@ -511,7 +511,7 @@ footer #final div img {
   header #user_nav #search_bar {
     display: none;
   }
-  header #user_nav div .menu-btn {
+  header #user_nav div #menu-btn {
     display: flex;
     margin-top: 0.3rem;
     margin-left: 0.7rem;
@@ -522,14 +522,14 @@ footer #final div img {
     transition: all 0.5s ease-in-out;
     /*ANIMACION*/
   }
-  header #user_nav div .menu-btn .menu-btn_burger {
+  header #user_nav div #menu-btn #menu-btn_burger {
     height: 0.2rem;
     width: 1.7rem;
     background: #F94F46;
     border-radius: 0.2rem;
     transition: all 0.5s ease-in-out;
   }
-  header #user_nav div .menu-btn .menu-btn_burger::before, header #user_nav div .menu-btn .menu-btn_burger::after {
+  header #user_nav div #menu-btn #menu-btn_burger::before, header #user_nav div #menu-btn #menu-btn_burger::after {
     content: "";
     position: absolute;
     height: 0.2rem;
@@ -538,19 +538,19 @@ footer #final div img {
     border-radius: 0.2rem;
     transition: all 0.5s ease-in-out;
   }
-  header #user_nav div .menu-btn .menu-btn_burger::before {
+  header #user_nav div #menu-btn #menu-btn_burger::before {
     transform: translateY(-0.7rem);
   }
-  header #user_nav div .menu-btn .menu-btn_burger::after {
+  header #user_nav div #menu-btn #menu-btn_burger::after {
     transform: translateY(0.7rem);
   }
-  header #user_nav div .menu-btn.open .menu-btn_burger {
+  header #user_nav div #menu-btn.open #menu-btn_burger {
     background: transparent;
   }
-  header #user_nav div .menu-btn.open .menu-btn_burger::before {
+  header #user_nav div #menu-btn.open #menu-btn_burger::before {
     transform: rotate(-45deg);
   }
-  header #user_nav div .menu-btn.open .menu-btn_burger::after {
+  header #user_nav div #menu-btn.open #menu-btn_burger::after {
     transform: rotate(45deg);
   }
   #link_nav_2 {
@@ -558,10 +558,24 @@ footer #final div img {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  #link_nav_2 .links_2 {
+  #link_nav_2 #links_2 {
     display: none;
+    position: absolute;
+    width: 100%;
+    left: 0rem;
+    top: 10rem;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    background-color: #f7ebeb;
+  }
+  #link_nav_2 #links_2 a {
+    display: inline-block;
+    margin: 2rem;
   }
   #link_nav_2 #search_bar_2 {
+    margin-bottom: 1.1rem;
+    padding-bottom: 1rem;
     display: flex;
   }
   #banner_de_inicio div {

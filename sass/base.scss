@@ -381,7 +381,7 @@ footer{
         display: flex;
         flex-direction: column;
         
-        .links_2{
+        #links_2{
             display: flex;
             justify-content: space-around;
            
@@ -675,7 +675,7 @@ header{
 
         div{       
             
-            .menu-btn{
+            #menu-btn{
                 
                 display: flex;
                 margin-top: .3rem;
@@ -687,7 +687,7 @@ header{
                 transition: all .5s ease-in-out;
                 //border:3px solid #F94F46;
 
-                .menu-btn_burger{
+                #menu-btn_burger{
                     height: .2rem;
                     width: 1.7rem;
                     background: #F94F46;
@@ -695,7 +695,7 @@ header{
                     transition: all .5s ease-in-out;
                 }
 
-                .menu-btn_burger::before,.menu-btn_burger::after{
+                #menu-btn_burger::before,#menu-btn_burger::after{
                     content: '';
                     position: absolute;
                     height: .2rem;
@@ -705,25 +705,25 @@ header{
                     transition: all .5s ease-in-out;
                 }
 
-                .menu-btn_burger::before{ //AQUI ESTAMOS TRANSLADANDO LOS PALITOS DEL MENU
+                #menu-btn_burger::before{ //AQUI ESTAMOS TRANSLADANDO LOS PALITOS DEL MENU
                     transform: translateY(-.7rem);
                 }
 
-                .menu-btn_burger::after{
+                #menu-btn_burger::after{
                     transform: translateY(.7rem);
                 }
 
                  /*ANIMACION*/
-                    &.open .menu-btn_burger{
+                    &.open #menu-btn_burger{
                         
                         background: transparent;
                     }
 
-                    &.open .menu-btn_burger::before{
+                    &.open #menu-btn_burger::before{
                      transform: rotate(-45deg) ;
                     }
 
-                    &.open .menu-btn_burger::after{
+                    &.open #menu-btn_burger::after{
                      transform: rotate(45deg) ;
                     }
             
@@ -744,12 +744,31 @@ header{
     height: 4rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    .links_2{
+
+    #links_2{
         display: none;
+        position: absolute;
+        width: 100%;
+        left: 0rem;
+        top:10rem;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        background-color: #f7ebeb;
+
+        
+            a{
+                
+                display:inline-block;
+                margin: 2rem;
+            }
+    
+        
     }
 
     #search_bar_2{
-        
+        margin-bottom: 1.1rem;
+        padding-bottom: 1rem;
         display: flex;
         
     }
