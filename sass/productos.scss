@@ -1,0 +1,109 @@
+#banner_productos{
+    
+    width: 100%;
+    height: 18rem;
+    background-image: url("./imagenes/banner_productos.png");
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    #mensaje_banner{
+
+        h1{
+            font-family: $font_Oswald;
+            font-size: 3.8rem;
+
+            color: rgb(13, 13, 13);
+            b{
+                font-size: 4.5rem;
+                font-weight: 700;
+                color: $color_darkRed;
+                letter-spacing: .2rem;
+            }
+        }
+        
+    }
+}
+
+#sec_productos{
+    
+    //background-color:red;
+    display: flex;
+    flex-direction: column;
+    .categorias{
+        padding: 2rem;
+        .categorias_titulo{
+            h2{
+                font-family: $font_Oswald;
+                letter-spacing: .2rem;
+            }
+        }
+        
+    }
+
+    .product_tarjetas{
+        display: flex;
+        padding: 1rem;
+
+        flex-wrap: wrap;
+        justify-content:space-evenly;
+        padding: 2rem;
+        .tarjeta{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 1.5rem;
+            background-color: $color_searchbar;
+            height: 25rem;
+            width: 15rem;
+            #producto-img{
+                margin-top: 1rem;
+                margin-bottom: .5rem;
+                width: 12rem;
+                height: 18rem;
+                img{
+                    border-radius: 1rem;
+                    width: 100%;
+                    height: 100%;
+                    object-fit:fill;
+
+                }
+                
+            }
+
+            .descripcion_producto_tarjeta{
+                h2, h3{
+                    font-family: $font_Oswald;
+                }
+                h2{
+                    font-size: 1.3rem;
+                    padding-left:  2rem;
+                    padding-right: 2rem;
+                }
+
+                h3{
+                    font-size: 1rem;
+                }
+                div{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    padding-bottom: 1rem;
+                    
+                    img{
+                        width: 3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #Camisetas{
+      //  background-color: blue;
+        
+    }
+}

@@ -1,14 +1,16 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap");
 .effect-one > a {
   position: relative;
   color: #F94F46;
@@ -140,43 +142,162 @@ header #user_nav div img {
   height: 1.2rem;
 }
 
+@media screen and (max-width: 1150px) {
+  header {
+    justify-content: space-between;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px;
+  }
+  header #logo {
+    padding-right: 0rem;
+  }
+  header #link_nav {
+    display: none;
+  }
+  #link_nav_2 {
+    display: flex;
+    flex-direction: column;
+  }
+  #link_nav_2 #links_2 {
+    display: flex;
+    justify-content: space-around;
+  }
+  #link_nav_2 #links_2 a {
+    font-family: "Poppins", sans-serif;
+    color: rgb(61, 61, 61);
+    font-size: 0.9rem;
+  }
+  #link_nav_2 #search_bar_2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 660px) {
+  header #logo {
+    padding-left: 2rem;
+  }
+  header #user_nav {
+    padding-right: 2rem;
+  }
+  header #user_nav #search_bar {
+    display: none;
+  }
+  header #user_nav div #menu-btn {
+    display: flex;
+    margin-top: 0.3rem;
+    margin-left: 0.7rem;
+    width: 2rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    /*ANIMACION*/
+  }
+  header #user_nav div #menu-btn #menu-btn_burger {
+    height: 0.2rem;
+    width: 1.7rem;
+    background: #F94F46;
+    border-radius: 0.2rem;
+    transition: all 0.5s ease-in-out;
+  }
+  header #user_nav div #menu-btn #menu-btn_burger::before, header #user_nav div #menu-btn #menu-btn_burger::after {
+    content: "";
+    position: absolute;
+    height: 0.2rem;
+    width: 1.7rem;
+    background: #F94F46;
+    border-radius: 0.2rem;
+    transition: all 0.5s ease-in-out;
+  }
+  header #user_nav div #menu-btn #menu-btn_burger::before {
+    transform: translateY(-0.7rem);
+  }
+  header #user_nav div #menu-btn #menu-btn_burger::after {
+    transform: translateY(0.7rem);
+  }
+  header #user_nav div #menu-btn.open #menu-btn_burger {
+    background: transparent;
+  }
+  header #user_nav div #menu-btn.open #menu-btn_burger::before {
+    transform: rotate(-45deg);
+  }
+  header #user_nav div #menu-btn.open #menu-btn_burger::after {
+    transform: rotate(45deg);
+  }
+  #link_nav_2 {
+    height: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  #link_nav_2 #links_2 {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0rem;
+    top: 10rem;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    background-color: #f7ebeb;
+  }
+  #link_nav_2 #links_2 a {
+    display: inline-block;
+    margin: 2rem;
+  }
+  #link_nav_2 #search_bar_2 {
+    margin-bottom: 1.1rem;
+    padding-bottom: 1rem;
+    display: flex;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
 #banner_de_inicio {
+  width: 100%;
+  height: 30rem;
+  background-image: url("./imagenes/banner2.jpg");
+  background-position: top;
+  background-size: cover;
   display: flex;
-  justify-content: center;
-}
-#banner_de_inicio div {
-  margin-top: 3rem;
-}
-#banner_de_inicio div img {
-  width: 30rem;
+  align-items: center;
 }
 #banner_de_inicio #mensaje_banner {
-  margin-left: 5rem;
-  margin-top: 6rem;
+  padding-left: 13rem;
 }
 #banner_de_inicio #mensaje_banner h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 3.5rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 3.8rem;
   color: white;
 }
+#banner_de_inicio #mensaje_banner h1 b {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #4C0202;
+  letter-spacing: 0.2rem;
+}
 #banner_de_inicio #mensaje_banner h2 {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  color: white;
+  font-size: 1.2rem;
+  color: #4C0202;
 }
 #banner_de_inicio #mensaje_banner #btn_banner {
   background-color: #F94F46;
-  width: 10rem;
+  width: 11rem;
   height: 3rem;
   border-radius: 100rem;
 }
 #banner_de_inicio #mensaje_banner #btn_banner a {
   position: absolute;
-  margin-top: 0.3rem;
   margin-left: 2rem;
 }
 #banner_de_inicio #mensaje_banner #btn_banner a #bt_h2 {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  color: white;
 }
 
 #seccion_Explora {
@@ -186,74 +307,132 @@ header #user_nav div img {
   margin-top: 3rem;
 }
 #seccion_Explora h1 {
-  font-family: "Urbanist", sans-serif;
-  color: #fffefe;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  color: #4C0202;
 }
 #seccion_Explora #tarjetas {
   margin-top: 2rem;
   display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+#seccion_Explora #tarjetas #sublimacion {
+  background-image: url("./imagenes/sublimacion.png");
+}
+#seccion_Explora #tarjetas #diseñoGrafico {
+  background-image: url("./imagenes/graphicdesing.png");
+}
+#seccion_Explora #tarjetas #cortadoralaser {
+  background-image: url("./imagenes/lasercut.png");
+}
+#seccion_Explora #tarjetas #impresion3D {
+  background-image: url("./imagenes/Impresion3D.png");
 }
 #seccion_Explora #tarjetas .tarjeta {
+  margin: 2rem;
+  padding: 1rem;
+  background-position: top;
+  background-size: cover;
+  border-radius: 2rem;
+  width: 15rem;
+  height: 30rem;
   display: flex;
-  flex-direction: column;
-  margin: 1rem;
-}
-#seccion_Explora #tarjetas .tarjeta #foto {
-  width: 13rem;
-  height: 14rem;
-  border-top-left-radius: 22px;
-  border-top-right-radius: 22px;
-  background-color: #FADDDD;
-}
-#seccion_Explora #tarjetas .tarjeta #foto img {
-  display: block;
-  margin: auto;
-  margin-top: 2rem;
-  width: 10rem;
+  align-items: center;
+  justify-content: center;
 }
 #seccion_Explora #tarjetas .tarjeta #descripcion {
-  border-bottom-left-radius: 22px;
-  border-bottom-right-radius: 22px;
-  background-color: white;
-  width: 13rem;
-  font-family: "Roboto", sans-serif;
+  display: none;
+  padding: 1rem;
 }
-#seccion_Explora #tarjetas .tarjeta #descripcion h4 {
-  text-align: center;
+#seccion_Explora #tarjetas .tarjeta #descripcion h2 {
+  color: white;
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
 }
-#seccion_Explora #tarjetas .tarjeta #descripcion h5 {
-  margin-top: -0.1rem;
-  text-align: center;
+#seccion_Explora #tarjetas .tarjeta:hover {
+  background-color: rgba(194, 130, 130, 0.863);
+}
+#seccion_Explora #tarjetas .tarjeta:hover #descripcion {
+  display: flex;
 }
 
 #empresa_descripcion {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 #empresa_descripcion .mensaje {
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 #empresa_descripcion .mensaje h1 {
-  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+  color: #4C0202;
   font-weight: bolder;
 }
 #empresa_descripcion .mensaje h3 {
+  font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
 }
 #empresa_descripcion .decripcion {
   margin-top: 5rem;
   display: flex;
-}
-#empresa_descripcion .decripcion .ilustracion {
-  margin-left: 4rem;
+  justify-content: space-evenly;
 }
 #empresa_descripcion .decripcion .ilustracion img {
-  width: 25rem;
+  width: 30rem;
 }
-#empresa_descripcion .decripcion #i2 img {
-  margin-right: 4rem;
+
+#banner_final {
+  margin-top: 5rem;
+  width: 100%;
+  height: 20rem;
+  background-image: url("./imagenes/banner_bottom.png");
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#banner_final #mensaje_banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#banner_final #mensaje_banner h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.8rem;
+  padding-bottom: 2rem;
+  color: rgb(13, 13, 13);
+}
+#banner_final #mensaje_banner h1 b {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #4C0202;
+  letter-spacing: 0.2rem;
+}
+#banner_final #mensaje_banner h2 {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: #4C0202;
+}
+#banner_final #mensaje_banner #btn_banner {
+  background-color: #F94F46;
+  width: 11rem;
+  height: 3rem;
+  border-radius: 100rem;
+}
+#banner_final #mensaje_banner #btn_banner a {
+  position: absolute;
+  margin-left: 2rem;
+}
+#banner_final #mensaje_banner #btn_banner a #bt_h2 {
+  font-size: 1rem;
+  color: white;
 }
 
 footer .links, footer #footer_link #link_nav ul {
@@ -298,45 +477,6 @@ footer #final div img {
 }
 
 @media screen and (max-width: 1150px) {
-  header {
-    justify-content: space-between;
-    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px;
-  }
-  header #logo {
-    padding-right: 0rem;
-  }
-  header #link_nav {
-    display: none;
-  }
-  #link_nav_2 {
-    display: flex;
-    flex-direction: column;
-  }
-  #link_nav_2 #links_2 {
-    display: flex;
-    justify-content: space-around;
-  }
-  #link_nav_2 #links_2 a {
-    font-family: "Poppins", sans-serif;
-    color: rgb(61, 61, 61);
-    font-size: 0.9rem;
-  }
-  #link_nav_2 #search_bar_2 {
-    display: none;
-  }
-  #banner_de_inicio div {
-    margin-top: 6rem;
-  }
-  #banner_de_inicio div img {
-    width: 25rem;
-  }
-  #banner_de_inicio #mensaje_banner {
-    margin-left: 1rem;
-    margin-top: 8rem;
-  }
-  #banner_de_inicio #mensaje_banner #btn_banner {
-    margin-top: 3rem;
-  }
   #seccion_Explora #tarjetas {
     flex-wrap: wrap;
     justify-content: center;
@@ -399,18 +539,11 @@ footer #final div img {
     flex-direction: column-reverse;
     align-items: center;
   }
-  #banner_de_inicio div {
-    margin-top: 0rem;
-  }
-  #banner_de_inicio div img {
-    width: 25rem;
-  }
   #banner_de_inicio #mensaje_banner {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 1rem;
-    margin-top: 5rem;
   }
   #banner_de_inicio #mensaje_banner h1 {
     font-family: "Roboto", sans-serif;
@@ -502,97 +635,11 @@ footer #final div img {
   }
 }
 @media screen and (max-width: 660px) {
-  header #logo {
-    padding-left: 2rem;
-  }
-  header #user_nav {
-    padding-right: 2rem;
-  }
-  header #user_nav #search_bar {
-    display: none;
-  }
-  header #user_nav div #menu-btn {
-    display: flex;
-    margin-top: 0.3rem;
-    margin-left: 0.7rem;
-    width: 2rem;
-    height: 2rem;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s ease-in-out;
-    /*ANIMACION*/
-  }
-  header #user_nav div #menu-btn #menu-btn_burger {
-    height: 0.2rem;
-    width: 1.7rem;
-    background: #F94F46;
-    border-radius: 0.2rem;
-    transition: all 0.5s ease-in-out;
-  }
-  header #user_nav div #menu-btn #menu-btn_burger::before, header #user_nav div #menu-btn #menu-btn_burger::after {
-    content: "";
-    position: absolute;
-    height: 0.2rem;
-    width: 1.7rem;
-    background: #F94F46;
-    border-radius: 0.2rem;
-    transition: all 0.5s ease-in-out;
-  }
-  header #user_nav div #menu-btn #menu-btn_burger::before {
-    transform: translateY(-0.7rem);
-  }
-  header #user_nav div #menu-btn #menu-btn_burger::after {
-    transform: translateY(0.7rem);
-  }
-  header #user_nav div #menu-btn.open #menu-btn_burger {
-    background: transparent;
-  }
-  header #user_nav div #menu-btn.open #menu-btn_burger::before {
-    transform: rotate(-45deg);
-  }
-  header #user_nav div #menu-btn.open #menu-btn_burger::after {
-    transform: rotate(45deg);
-  }
-  #link_nav_2 {
-    height: 4rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  #link_nav_2 #links_2 {
-    display: none;
-    position: absolute;
-    width: 100%;
-    left: 0rem;
-    top: 10rem;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
-    background-color: #f7ebeb;
-  }
-  #link_nav_2 #links_2 a {
-    display: inline-block;
-    margin: 2rem;
-  }
-  #link_nav_2 #search_bar_2 {
-    margin-bottom: 1.1rem;
-    padding-bottom: 1rem;
-    display: flex;
-  }
-  #banner_de_inicio div {
-    margin-top: 0rem;
-  }
-  #banner_de_inicio div img {
-    width: 15rem;
-  }
   #banner_de_inicio #mensaje_banner {
     margin-left: 1rem;
-    margin-top: 5rem;
   }
   #banner_de_inicio #mensaje_banner h1 {
     font-size: 2rem;
-  }
-  #seccion_Explora h1 {
-    font-size: 1.4rem;
   }
   #empresa_descripcion .mensaje {
     margin-top: 0rem;
@@ -649,64 +696,6 @@ footer #final div img {
   }
 }
 @media screen and (max-width: 420px) {
-  /*header{
-      #logo{
-          margin-top: 1.5rem;
-          margin-right:4rem;
-          margin-left: -1rem;
-          img{
-              width: 5.5rem;
-          }
-
-
-      }
-
-
-      #user_nav{
-
-          #search_bar{
-
-              margin-top: 2rem;
-              width:15rem;
-              margin-right: -.5rem;
-
-              input{
-                  margin-right: 0rem;
-                  width: 10rem;
-              }
-              img{
-                  margin-left: 1rem;
-                  margin-top: 0rem;
-                  width: 1rem;
-                  height: 1rem;
-
-              }
-          }
-
-          div{
-
-               #menu{
-
-                   img{
-                        width: 1.1rem;
-                        height: 1.1rem;
-                        margin-top: -1rem;
-                        margin-right: .5rem;
-
-                   }
-               }
-
-              img{
-
-                  margin-top: -.5rem;
-                  margin-left: .2rem;
-                  width: 1.5rem;
-                  height: 1.5rem;
-              }
-          }
-
-      }
-  }*/
   #banner_de_inicio div {
     margin-top: 0rem;
   }
@@ -750,6 +739,89 @@ footer #final div img {
   #empresa_descripcion #d2 {
     flex-direction: column-reverse;
   }
+}
+#banner_productos {
+  width: 100%;
+  height: 18rem;
+  background-image: url("./imagenes/banner_productos.png");
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#banner_productos #mensaje_banner h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.8rem;
+  color: rgb(13, 13, 13);
+}
+#banner_productos #mensaje_banner h1 b {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #4C0202;
+  letter-spacing: 0.2rem;
+}
+
+#sec_productos {
+  display: flex;
+  flex-direction: column;
+}
+#sec_productos .categorias {
+  padding: 2rem;
+}
+#sec_productos .categorias .categorias_titulo h2 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.2rem;
+}
+#sec_productos .product_tarjetas {
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+#sec_productos .product_tarjetas .tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1.5rem;
+  background-color: #f7ebeb;
+  height: 25rem;
+  width: 15rem;
+}
+#sec_productos .product_tarjetas .tarjeta #producto-img {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 12rem;
+  height: 18rem;
+}
+#sec_productos .product_tarjetas .tarjeta #producto-img img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+#sec_productos .product_tarjetas .tarjeta .descripcion_producto_tarjeta h2, #sec_productos .product_tarjetas .tarjeta .descripcion_producto_tarjeta h3 {
+  font-family: "Oswald", sans-serif;
+}
+#sec_productos .product_tarjetas .tarjeta .descripcion_producto_tarjeta h2 {
+  font-size: 1.3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+#sec_productos .product_tarjetas .tarjeta .descripcion_producto_tarjeta h3 {
+  font-size: 1rem;
+}
+#sec_productos .product_tarjetas .tarjeta .descripcion_producto_tarjeta div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+#sec_productos .product_tarjetas .tarjeta .descripcion_producto_tarjeta div img {
+  width: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

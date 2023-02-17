@@ -1,0 +1,675 @@
+@import "header";
+@import "colors";
+@import "fonts";
+@import "mixin";
+
+$logo_width: 8.25rem;
+$logo_height: 5.313rem;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+#banner_de_inicio{
+    width: 100%;
+    height: 30rem;
+    background-image: url("./imagenes/banner2.jpg");
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+   
+   
+    #mensaje_banner{
+        padding-left: 13rem;
+       
+        
+        h1{
+            font-family: $font_Oswald;
+            font-size: 3.8rem;
+            
+            color: white;
+            b{
+                font-size: 4.5rem;
+                font-weight: 700;
+                color: $color_darkRed;
+                letter-spacing: .2rem;
+            }
+        }
+        h2{
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            font-family: $font_Roboto;
+            font-size: 1.2rem;
+            color: $color_darkRed;
+        }
+        #btn_banner{///
+            
+            @include btnPrimario($color_hotpink,white,11rem,.9rem)
+        }
+    }
+}
+
+#seccion_Explora{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    h1{
+        font-family: $font_Oswald;
+        font-size: 2.5rem;
+        color: $color_darkRed;
+    }
+
+    #tarjetas{
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem;
+        align-items: center;
+        justify-content: center;
+
+        #sublimacion{
+            background-image: url("./imagenes/sublimacion.png");
+        }
+
+        #diseñoGrafico{
+            background-image: url("./imagenes/graphicdesing.png");
+        }
+
+        #cortadoralaser{
+            background-image: url("./imagenes/lasercut.png");
+        }
+
+        #impresion3D{
+            background-image: url("./imagenes/Impresion3D.png");
+        }
+    
+        .tarjeta{
+            margin: 2rem;
+            padding: 1rem;
+            background-position: top;
+            background-size: cover;
+            border-radius: 2rem;
+            width: 15rem;
+            height: 30rem;
+            display: flex;
+            
+            align-items: center;
+            justify-content: center;
+
+            #descripcion{
+                display: none;
+            
+                padding: 1rem;
+                h2{
+                    color: white;
+                    font-size: 2rem;
+                    font-family:$font_Oswald;
+                }
+                
+            }
+
+
+
+        }
+
+        
+        .tarjeta:hover{
+            background-color: rgba(194, 130, 130, 0.863);
+            #descripcion{
+                display: flex;
+                     
+            }
+        }
+    } 
+
+}
+
+#empresa_descripcion{
+
+    align-items: center;
+    .mensaje{
+        margin-top: 8rem;
+        
+        h1{
+            font-size: 3rem;
+            font-family: $font_Oswald;
+            color: $color_darkRed;
+            font-weight:bolder;
+        }
+        h3{
+            font-size: 1.5rem;
+            font-family: $font_Roboto;
+            
+        }
+    }
+
+    .decripcion{
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-evenly;
+        .ilustracion{
+            
+            img{
+                width: 30rem;
+            }
+        }
+
+        
+    }  
+}
+
+#banner_final{
+    margin-top: 5rem;
+    width: 100%;
+    height: 20rem;
+    background-image: url("./imagenes/banner_bottom.png");
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    #mensaje_banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+        
+        h1{
+            font-family: $font_Oswald;
+            font-size: 3.8rem;
+            padding-bottom: 2rem;
+            
+            color: rgb(13, 13, 13);
+            b{
+                font-size: 4.5rem;
+                font-weight: 700;
+                color: $color_darkRed;
+                letter-spacing: .2rem;
+            }
+        }
+        h2{
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            font-family: $font_Roboto;
+            font-size: 1.2rem;
+            color: $color_darkRed;
+        }
+        #btn_banner{///
+            
+            @include btnPrimario($color_hotpink,white,11rem,1rem)
+        }
+    }
+}
+
+footer{
+
+    .links{
+        display: flex;
+        list-style: none;
+    } 
+
+    #footer_link{
+        margin-top:5rem;
+        display: flex;
+        justify-content: center;
+        #logo{
+            img{
+                width: 9rem;
+            }
+        }
+        #link_nav{
+            margin-right: 5rem;
+            ul{
+                @extend .links;//EXTEND
+                margin-top: 1rem;
+               
+                li{
+                    h4{
+                        font-family: $font_Roboto;
+                    }
+                    margin-left: 5rem;
+                }
+            }
+        }
+    }
+
+
+   
+
+    #final{
+        display: flex;
+        justify-content: center;
+        h4{
+            font-family: $font_Roboto;
+        }
+        div{
+            margin-left: 10rem;
+            display: flex;
+            img{
+                margin-top: .5rem;
+                margin-left: 2rem;
+                width: 2.5rem;
+            }
+        }
+    }
+}
+
+
+//----------------------------------------------------------------------
+
+
+
+@media screen and (max-width: 1150px) { //IPADS
+    
+
+    
+
+    #seccion_Explora{
+       
+        #tarjetas{
+            flex-wrap: wrap;
+            justify-content: center;
+    
+        } 
+    }
+
+    #empresa_descripcion{
+        .mensaje{
+         
+            h1{
+              font-size: 2rem;
+            }
+            h3{
+
+                font-size: 1rem;
+            }
+        }
+    
+        .decripcion{
+            .ilustracion{
+                margin-left: 1rem;
+                img{
+                    width: 22rem;
+                }
+            }
+    
+            #i2{
+                img{
+                    margin-right: 1rem;
+                }
+            }
+              
+        }
+          
+    }
+
+    footer{
+        #footer_link{
+            
+            
+            #link_nav{
+                margin-right: 0rem;
+                ul{
+                    margin-top: 1rem;
+                    display: flex;
+                    list-style: none;
+                    li{
+                        h4{
+                            font-family: $font_Roboto;
+                        }
+                        margin-left: 2rem;
+                    }
+                }
+            }
+        }
+    
+    }
+    
+        
+}
+
+@media screen and (max-width: 870px) { //LARGE
+  
+
+    #empresa_descripcion{
+        margin-top: 4rem;
+        .mensaje{
+         
+            h1{
+              font-size: 1.5rem;
+            }
+            h3{
+
+                font-size: .8rem;
+            }
+        }
+    
+        .decripcion{
+            margin-top: 1rem;
+            .ilustracion{
+                margin-left: 0rem;
+                img{
+                    width: 20rem;
+                }
+            }
+    
+            #i2{
+                img{
+                    margin-right: 0rem;
+                }
+            }
+            
+    
+        }
+    
+        
+    }
+
+     
+}
+
+@media screen and (max-width: 750px) { //LARGE
+  
+
+    #banner_de_inicio{
+        flex-direction: column-reverse;
+        align-items: center;
+        
+        #mensaje_banner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 1rem;
+            
+            h1{
+                font-family: $font_Roboto;
+                text-align: center;
+                font-size: 3rem;
+                color: white;
+            }
+            #msg{
+                display: none;
+            }
+            #btn_banner{
+                
+                margin-top: 1rem;
+                background-color: $color_hotpink ;
+                width: 10rem;
+                height: 3rem;
+                border-radius: 100rem;
+                a{
+                    position:absolute;
+                    margin-top: .3rem;
+                    margin-left:2rem;
+                    #bt_h2{
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #empresa_descripcion{
+        h3{
+            order:3;
+            text-align: center;
+            font-family: $font_Roboto;
+            font-size: 1rem;
+        }
+
+        .mensaje{
+            margin-top: 0rem;
+            h1{
+                text-align: center;
+                font-size: 2rem;
+            }
+            h3{
+                text-justify: distribute;
+            }
+        }
+    
+        .decripcion{
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+    
+            .ilustracion{
+                margin-left: 0rem;
+                img{
+                    width: 25rem;
+                }
+            }
+    
+            #i2{
+                img{
+                    margin-right: 4rem;
+                }
+            }
+            
+    
+        }
+
+
+        #d2{
+            flex-direction: column-reverse;
+        }
+    
+        
+    }
+
+    footer{
+        #footer_link{
+            
+            
+            #link_nav{
+                margin-right: 0rem;
+                ul{
+                    margin-top: 1.4rem;
+                    display: flex;
+                    list-style: none;
+                    li{
+                        h4{
+                            font-family: $font_Roboto;
+                            font-size: .9rem;
+                        }
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+        
+    #final{
+        display: flex;
+        justify-content: center;
+        h4{
+            font-family: $font_Roboto;
+        }
+        div{
+            margin-left: 5rem;
+            display: flex;
+            img{
+                margin-top: .5rem;
+                margin-left: 1rem;
+                width: 2.5rem;
+            }
+        }
+    }
+    
+    }
+    
+}
+
+@media screen and (max-width: 660px) { //LARGE
+
+
+    #banner_de_inicio{
+     
+       
+        #mensaje_banner{
+            margin-left: 1rem;
+            
+            h1{         
+                font-size: 2rem;
+            }
+         
+        }
+    }
+
+   
+
+    #empresa_descripcion{
+      
+        .mensaje{
+            margin-top: 0rem;
+            h1{
+                text-align: center;
+                font-size: 1.8rem;
+            }
+            h3{
+                text-justify: distribute;
+            }
+        }
+    
+        .decripcion{
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+    
+            .ilustracion{
+                margin-left: 0rem;
+                img{
+                    width: 25rem;
+                }
+            }
+    
+            #i2{
+                img{
+                    margin-right: 4rem;
+                }
+            }
+            
+    
+        }
+
+
+        #d2{
+            flex-direction: column-reverse;
+        }
+    
+        
+    }
+
+    footer{
+        
+        #footer_link{
+
+            flex-direction: column;
+            align-items: center;
+            h4{
+                display: none;
+            }
+                     
+        }
+        
+    #final{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: -2rem;
+        h4{
+            text-align: center;
+            font-family: $font_Roboto;
+        }
+        div{
+            margin-left: 0rem;
+            display: flex;
+            
+            img{
+                margin-top: .5rem;
+                margin: 1rem;
+                width: 2.5rem;
+            }
+        }
+    }
+    
+    }
+}
+
+@media screen and (max-width: 420px) { //LARGE
+    
+
+    #banner_de_inicio{
+     
+        div{
+            margin-top: 0rem;
+            img{
+                width: 15rem;
+            }
+        }
+        #mensaje_banner{
+            margin-left: 1rem;
+            margin-top: 5rem;
+            h1{         
+                font-size: 2rem;
+            }
+         
+        }
+    }
+
+    #seccion_Explora{
+        h1{
+            font-size: 1.1rem;
+        }
+    }
+
+    #empresa_descripcion{
+      
+        .mensaje{
+            margin-top: 0rem;
+            h1{
+                text-align: center;
+                font-size: 1.3rem;
+            }
+            h3{
+                text-justify: distribute;
+            }
+        }
+    
+        .decripcion{
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+    
+            .ilustracion{
+                margin-left: 0rem;
+                img{
+                    width: 15rem;
+                }
+            }
+    
+            #i2{
+                img{
+                    margin-right: 0rem;
+                }
+            }
+            
+    
+        }
+
+
+        #d2{
+            flex-direction: column-reverse;
+        }
+    
+        
+    }
+    
+}
