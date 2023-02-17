@@ -46,18 +46,20 @@
     .product_tarjetas{
         display: flex;
         padding: 1rem;
-
         flex-wrap: wrap;
         justify-content:space-evenly;
         padding: 2rem;
         .tarjeta{
+            margin: 1rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             border-radius: 1.5rem;
             background-color: $color_searchbar;
+            transition: box-shadow .3s;
             height: 25rem;
             width: 15rem;
+           
             #producto-img{
                 margin-top: 1rem;
                 margin-bottom: .5rem;
@@ -100,10 +102,9 @@
                 }
             }
         }
+
+
     }
 
-    #Camisetas{
-      //  background-color: blue;
-        
-    }
+    
 }

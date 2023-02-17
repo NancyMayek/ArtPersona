@@ -1,0 +1,208 @@
+footer{
+
+    .links{
+        display: flex;
+        list-style: none;
+    } 
+
+    #footer_link{
+        margin-top:5rem;
+        display: flex;
+        justify-content: center;
+        #logo{
+            img{
+                width: 9rem;
+            }
+        }
+        #link_nav{
+            margin-right: 5rem;
+            ul{
+                @extend .links;//EXTEND
+                margin-top: 1rem;
+               
+                li{
+                    h4{
+                        font-family: $font_Roboto;
+                    }
+                    margin-left: 5rem;
+                }
+            }
+        }
+    }
+
+
+   
+
+    #final{
+        display: flex;
+        justify-content: center;
+        h4{
+            font-family: $font_Roboto;
+        }
+        div{
+            margin-left: 10rem;
+            display: flex;
+            img{
+                margin-top: .5rem;
+                margin-left: 2rem;
+                width: 2.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) { //IPADS
+    
+
+    footer{
+        #footer_link{
+            
+            
+            #link_nav{
+                margin-right: 0rem;
+                ul{
+                    margin-top: 1rem;
+                    display: flex;
+                    list-style: none;
+                    li{
+                        h4{
+                            font-family: $font_Roboto;
+                        }
+                        margin-left: 2rem;
+                    }
+                }
+            }
+        }
+    
+    }
+    
+        
+}
+
+@media screen and (max-width: 870px) { //LARGE
+
+    footer{
+        #footer_link{
+            
+            
+            #link_nav{
+                margin-right: 0rem;
+                ul{
+                    margin-top: 1.4rem;
+                    display: flex;
+                    list-style: none;
+                    li{
+                        h4{
+                            font-family: $font_Roboto;
+                            font-size: .9rem;
+                        }
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+        
+    #final{
+        display: flex;
+        justify-content: center;
+        h4{
+            font-family: $font_Roboto;
+        }
+        div{
+            margin-left: 5rem;
+            display: flex;
+            img{
+                margin-top: .5rem;
+                margin-left: 1rem;
+                width: 2.5rem;
+            }
+        }
+    }
+    
+    }
+    
+}
+
+@media screen and (max-width: 750px) { //LARGE
+  
+
+    footer{
+        #footer_link{
+            
+            
+            #link_nav{
+                margin-right: 0rem;
+                ul{
+                    margin-top: 1.4rem;
+                    display: flex;
+                    list-style: none;
+                    li{
+                        h4{
+                            font-family: $font_Roboto;
+                            font-size: .9rem;
+                        }
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+        
+    #final{
+        display: flex;
+        justify-content: center;
+        h4{
+            font-family: $font_Roboto;
+        }
+        div{
+            margin-left: 5rem;
+            display: flex;
+            img{
+                margin-top: .5rem;
+                margin-left: 1rem;
+                width: 2.5rem;
+            }
+        }
+    }
+    
+    }
+    
+}
+
+@media screen and (max-width: 660px) { //LARGE
+
+    footer{
+        
+        #footer_link{
+
+            flex-direction: column;
+            align-items: center;
+            h4{
+                display: none;
+            }
+                     
+        }
+        
+    #final{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: -2rem;
+        h4{
+            text-align: center;
+            font-family: $font_Roboto;
+        }
+        div{
+            margin-left: 0rem;
+            display: flex;
+            
+            img{
+                margin-top: .5rem;
+                margin: 1rem;
+                width: 2.5rem;
+            }
+        }
+    }
+    
+    }
+}
+
