@@ -88,7 +88,7 @@ header #user_nav #search_bar img {
 header #user_nav div {
   display: flex;
 }
-header #user_nav div #menu {
+header #user_nav div .menu-btn {
   display: none;
 }
 header #user_nav div img {
@@ -511,13 +511,47 @@ footer #final div img {
   header #user_nav #search_bar {
     display: none;
   }
-  header #user_nav div #menu {
+  header #user_nav div .menu-btn {
     display: flex;
-  }
-  header #user_nav div #menu img {
     margin-top: 0.3rem;
+    margin-left: 0.7rem;
     width: 2rem;
     height: 2rem;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    /*ANIMACION*/
+  }
+  header #user_nav div .menu-btn .menu-btn_burger {
+    height: 0.2rem;
+    width: 1.7rem;
+    background: #F94F46;
+    border-radius: 0.2rem;
+    transition: all 0.5s ease-in-out;
+  }
+  header #user_nav div .menu-btn .menu-btn_burger::before, header #user_nav div .menu-btn .menu-btn_burger::after {
+    content: "";
+    position: absolute;
+    height: 0.2rem;
+    width: 1.7rem;
+    background: #F94F46;
+    border-radius: 0.2rem;
+    transition: all 0.5s ease-in-out;
+  }
+  header #user_nav div .menu-btn .menu-btn_burger::before {
+    transform: translateY(-0.7rem);
+  }
+  header #user_nav div .menu-btn .menu-btn_burger::after {
+    transform: translateY(0.7rem);
+  }
+  header #user_nav div .menu-btn.open .menu-btn_burger {
+    background: transparent;
+  }
+  header #user_nav div .menu-btn.open .menu-btn_burger::before {
+    transform: rotate(-45deg);
+  }
+  header #user_nav div .menu-btn.open .menu-btn_burger::after {
+    transform: rotate(45deg);
   }
   #link_nav_2 {
     height: 4rem;
@@ -530,59 +564,6 @@ footer #final div img {
   #link_nav_2 #search_bar_2 {
     display: flex;
   }
-  /*header{
-
-
-      #logo{
-          margin-top: 2.5rem;
-          margin-right:6rem;
-          img{
-              width: 7rem;
-          }
-
-
-      }
-
-
-      #user_nav{
-
-          #search_bar{
-
-              width:21rem;
-              display: flex;
-              justify-content: center;
-              margin-right: -.5rem;
-
-              input{
-                  margin-right: 5rem;
-                  width: 10rem;
-              }
-
-          }
-
-          div{
-
-               #menu{
-                 display: block;
-                  img{
-                       width: 1.9rem;
-                       height: 1.6rem;
-                       margin-top: 1rem;
-                       margin-right: .3rem;
-
-                  }
-              }
-
-              img{
-                  margin-top: .8rem;
-                  margin-left: .3rem;
-                  width: 2rem;
-                  height: 2rem;
-              }
-          }
-
-      }
-  }*/
   #banner_de_inicio div {
     margin-top: 0rem;
   }

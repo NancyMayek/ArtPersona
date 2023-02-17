@@ -44,6 +44,8 @@ $color_hotpink:#F94F46;
 }
 
 
+
+
 header{
     display:flex;
     justify-content: space-around;
@@ -114,7 +116,7 @@ header{
 
         div{       
             display: flex;
-            #menu{
+            .menu-btn{
                 display: none;
             }
             img{
@@ -673,15 +675,64 @@ header{
 
         div{       
             
-            #menu{
+            .menu-btn{
+                
                 display: flex;
-                img{
-                    margin-top: .3rem;
-                    width: 2rem;
-                    height: 2rem;
+                margin-top: .3rem;
+                margin-left: .7rem;
+                width: 2rem;
+                height: 2rem;
+                justify-content: center;
+                align-items: center;
+                transition: all .5s ease-in-out;
+                //border:3px solid #F94F46;
+
+                .menu-btn_burger{
+                    height: .2rem;
+                    width: 1.7rem;
+                    background: #F94F46;
+                    border-radius: .2rem;
+                    transition: all .5s ease-in-out;
                 }
-               
+
+                .menu-btn_burger::before,.menu-btn_burger::after{
+                    content: '';
+                    position: absolute;
+                    height: .2rem;
+                    width: 1.7rem;
+                    background: #F94F46;
+                    border-radius: .2rem;
+                    transition: all .5s ease-in-out;
+                }
+
+                .menu-btn_burger::before{ //AQUI ESTAMOS TRANSLADANDO LOS PALITOS DEL MENU
+                    transform: translateY(-.7rem);
+                }
+
+                .menu-btn_burger::after{
+                    transform: translateY(.7rem);
+                }
+
+                 /*ANIMACION*/
+                    &.open .menu-btn_burger{
+                        
+                        background: transparent;
+                    }
+
+                    &.open .menu-btn_burger::before{
+                     transform: rotate(-45deg) ;
+                    }
+
+                    &.open .menu-btn_burger::after{
+                     transform: rotate(45deg) ;
+                    }
+            
+            
+                
+
             }
+
+            
             
         }
         
@@ -705,59 +756,6 @@ header{
 }
 
 
-    /*header{
-        
-    
-        #logo{
-            margin-top: 2.5rem;
-            margin-right:6rem;
-            img{
-                width: 7rem;
-            }
-            
-            
-        }
-    
-    
-        #user_nav{
-        
-            #search_bar{
-            
-                width:21rem;
-                display: flex;
-                justify-content: center;
-                margin-right: -.5rem;
-                
-                input{
-                    margin-right: 5rem;
-                    width: 10rem;
-                }
-                
-            }
-    
-            div{
-                 
-                 #menu{
-                   display: block;
-                    img{
-                         width: 1.9rem;
-                         height: 1.6rem;
-                         margin-top: 1rem;
-                         margin-right: .3rem;
-
-                    }
-                }
-                
-                img{
-                    margin-top: .8rem;
-                    margin-left: .3rem;
-                    width: 2rem;
-                    height: 2rem;
-                }
-            }
-            
-        }
-    }*/
 
     #banner_de_inicio{
      
