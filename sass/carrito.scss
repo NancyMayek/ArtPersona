@@ -1,0 +1,91 @@
+.sidenav {
+    height: 100vh; 
+    width: 0; 
+    position:fixed;
+    z-index: 1; 
+    top: 0;
+    right: 0;
+    background-color: $color_searchbar; 
+    overflow-x: hidden; 
+    padding-top: 2rem;
+    transition: 0.5s; 
+
+    h2,h3,a{
+    font-family: $font_poopins500;
+    padding-left: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #352424;
+    display: block;
+    transition: 0.3s;
+    }
+
+    a{
+        font-size: 1.5rem;
+    }
+
+    #carrito_top{
+        display: flex;
+        align-items: center;
+    }
+
+    .carrito_item {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1rem;
+    
+        img {
+            border-radius: 20%;
+            width: 4rem;
+            height: 5rem;
+        }
+    
+        #cantidad_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .2rem;
+    
+            #cantidad {
+                padding-left: 1rem;
+            }
+    
+        }
+    
+        .boton_blanco {
+            background-color: white;
+            width: 1rem;
+            border: none;
+        }
+    
+        .boton_blanco:hover {
+            background-color: $color_hotpink;
+            color: white;
+        }
+    
+        #btn_borrar {
+            @extend .boton_blanco;
+            width: 4rem;
+            background-color: $color_searchbar;
+            color: $color_hotpink;
+            margin-left: 1rem;
+    
+        }
+    
+    
+    
+    }
+    
+    #total {
+        display: flex;
+        justify-content: right;
+    
+        #precio_total {
+            font-size: 1.2rem;
+            padding-right: 1rem;
+        }
+    }
+    
+    
+    }

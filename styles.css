@@ -144,54 +144,6 @@ header #user_nav div img {
   height: 1.2rem;
 }
 
-.sidenav {
-  height: 100vh;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: #f7ebeb;
-  overflow-x: hidden;
-  padding-top: 2rem;
-  transition: 0.5s;
-}
-.sidenav h2, .sidenav h3, .sidenav a {
-  font-family: "Poppins", sans-serif;
-  padding-left: 3rem;
-  text-decoration: none;
-  font-size: 1rem;
-  color: #352424;
-  display: block;
-  transition: 0.3s;
-}
-.sidenav a {
-  font-size: 1.5rem;
-}
-.sidenav #carrito_top {
-  display: flex;
-  align-items: center;
-}
-.sidenav .carrito_item {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 1rem;
-}
-.sidenav .carrito_item img {
-  border-radius: 20%;
-  width: 4rem;
-  height: 5rem;
-}
-.sidenav #total {
-  display: flex;
-  justify-content: right;
-}
-.sidenav #total #precio_total {
-  font-size: 1.2rem;
-  padding-right: 1rem;
-}
-
 @media screen and (max-width: 1150px) {
   header {
     justify-content: space-between;
@@ -1184,6 +1136,78 @@ input {
 }
 .action-button:focus {
   outline: 0;
+}
+
+.sidenav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #f7ebeb;
+  overflow-x: hidden;
+  padding-top: 2rem;
+  transition: 0.5s;
+}
+.sidenav h2, .sidenav h3, .sidenav a {
+  font-family: "Poppins", sans-serif;
+  padding-left: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #352424;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a {
+  font-size: 1.5rem;
+}
+.sidenav #carrito_top {
+  display: flex;
+  align-items: center;
+}
+.sidenav .carrito_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.sidenav .carrito_item img {
+  border-radius: 20%;
+  width: 4rem;
+  height: 5rem;
+}
+.sidenav .carrito_item #cantidad_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+}
+.sidenav .carrito_item #cantidad_container #cantidad {
+  padding-left: 1rem;
+}
+.sidenav .carrito_item .boton_blanco, .sidenav .carrito_item #btn_borrar {
+  background-color: white;
+  width: 1rem;
+  border: none;
+}
+.sidenav .carrito_item .boton_blanco:hover, .sidenav .carrito_item #btn_borrar:hover {
+  background-color: #F94F46;
+  color: white;
+}
+.sidenav .carrito_item #btn_borrar {
+  width: 4rem;
+  background-color: #f7ebeb;
+  color: #F94F46;
+  margin-left: 1rem;
+}
+.sidenav #total {
+  display: flex;
+  justify-content: right;
+}
+.sidenav #total #precio_total {
+  font-size: 1.2rem;
+  padding-right: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

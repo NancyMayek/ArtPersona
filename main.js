@@ -39,15 +39,46 @@ window.addEventListener('resize', toggleDisplay);
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-  document.getElementById("mySidenav").style.width = "20rem";
-  document.getElementById("main").style.marginLeft = "20rem";
+  document.getElementById("mySidenav").style.width = "25rem";
+  añadir_carrito();
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
 }
+
+function añadir_carrito(){
+ const cartDiv = document.getElementById('productos_carrito');
+  const totalPriceP = document.getElementById('precio_total');
+  const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
+  let totalPrice = 0;
+  cartDiv.innerHTML=""; 
+
+  cartItems.forEach(item => {
+
+    cartDiv.innerHTML+= 
+    `
+      <div class="carrito_item">
+                <img id="imagen" src="${item.image}">
+                <h3 id="nombre">${item.name}</h3>
+                <div id="cantidad_container">
+                    <div id="botones_cantidad">
+                        <button  onclick="addCantidad()" class="boton_blanco" id="btn_add">+</button>
+                        <button onclick="subCantidad()" class="boton_blanco" id="btn_menos">-</button>
+                    </div>
+                    <h3 id="cantidad">${item.quantity}</h3>
+                </div>
+                <h3 id="precio_${item.id}">$${item.price}</h3>
+                <button  onclick="borrarItem()" id="btn_borrar">Borrar</button>
+            </div>
+    `
+  });
+}
+
+
+
+
 
 
 
@@ -148,4 +179,30 @@ function addProductToCart(id, name, price, image) {
     cartItems.push(cartItem);
   }
   localStorage.setItem('cart', JSON.stringify(cartItems));
+
+  const cartDiv = document.getElementById('productos_carrito');
+  
+  
+  let totalPrice = 0;
+  cartDiv.innerHTML=""; 
+
+  cartItems.forEach(item => {
+
+    cartDiv.innerHTML+= 
+    `
+      <div class="carrito_item">
+                <img id="imagen" src="${item.image}">
+                <h3 id="nombre">${item.name}</h3>
+                <div id="cantidad_container">
+                    <div id="botones_cantidad">
+                        <button  onclick="addCantidad()" class="boton_blanco" id="btn_add">+</button>
+                        <button onclick="subCantidad()" class="boton_blanco" id="btn_menos">-</button>
+                    </div>
+                    <h3 id="cantidad">${item.quantity}</h3>
+                </div>
+                <h3 id="precio_${item.id}">$${item.price}</h3>
+                <button  onclick="borrarItem()" id="btn_borrar">Borrar</button>
+            </div>
+    `
+  });
 }
