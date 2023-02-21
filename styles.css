@@ -145,16 +145,16 @@ header #user_nav div img {
 }
 
 .sidenav {
-  height: 100vh; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
   top: 0;
   right: 0;
   background-color: #f7ebeb;
-  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-x: hidden;
   padding-top: 2rem;
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  transition: 0.5s;
 }
 .sidenav h2, .sidenav h3, .sidenav a {
   font-family: "Poppins", sans-serif;
@@ -456,7 +456,7 @@ footer #final div img {
   text-decoration: none;
 }
 
-#banner_de_inicio {
+#banner_de_inicio, #banner_final {
   width: 100%;
   height: 30rem;
   background-image: url("./imagenes/banner2.jpg");
@@ -465,42 +465,42 @@ footer #final div img {
   display: flex;
   align-items: center;
 }
-#banner_de_inicio #mensaje_banner {
+#banner_de_inicio #mensaje_banner, #banner_final #mensaje_banner {
   padding-left: 13rem;
 }
-#banner_de_inicio #mensaje_banner h1 {
+#banner_de_inicio #mensaje_banner h1, #banner_final #mensaje_banner h1 {
   font-family: "Oswald", sans-serif;
   font-size: 3.8rem;
   color: white;
 }
-#banner_de_inicio #mensaje_banner h1 b {
+#banner_de_inicio #mensaje_banner h1 b, #banner_final #mensaje_banner h1 b {
   font-size: 4.5rem;
   font-weight: 700;
   color: #4C0202;
   letter-spacing: 0.2rem;
 }
-#banner_de_inicio #mensaje_banner h2 {
+#banner_de_inicio #mensaje_banner h2, #banner_final #mensaje_banner h2 {
   padding-top: 1rem;
   padding-bottom: 2rem;
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   color: #4C0202;
 }
-#banner_de_inicio #mensaje_banner #btn_banner {
+#banner_de_inicio #mensaje_banner #btn_banner, #banner_final #mensaje_banner #btn_banner {
   background-color: #F94F46;
   width: 11rem;
   height: 3rem;
   border-radius: 100rem;
 }
-#banner_de_inicio #mensaje_banner #btn_banner a {
+#banner_de_inicio #mensaje_banner #btn_banner a, #banner_final #mensaje_banner #btn_banner a {
   position: absolute;
   margin-left: 2rem;
 }
-#banner_de_inicio #mensaje_banner #btn_banner a #bt_h2 {
+#banner_de_inicio #mensaje_banner #btn_banner a #bt_h2, #banner_final #mensaje_banner #btn_banner a #bt_h2 {
   font-size: 0.9rem;
   color: white;
 }
-#banner_de_inicio #mensaje_banner #btn_banner:hover {
+#banner_de_inicio #mensaje_banner #btn_banner:hover, #banner_final #mensaje_banner #btn_banner:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -510,7 +510,7 @@ footer #final div img {
   align-items: center;
   margin-top: 3rem;
 }
-#seccion_Explora h1 {
+#seccion_Explora h2 {
   font-family: "Oswald", sans-serif;
   font-size: 2.5rem;
   color: #4C0202;
@@ -569,7 +569,7 @@ footer #final div img {
 #empresa_descripcion .mensaje {
   margin-top: 8rem;
 }
-#empresa_descripcion .mensaje h1 {
+#empresa_descripcion .mensaje h2 {
   font-size: 3rem;
   font-family: "Oswald", sans-serif;
   color: #4C0202;
@@ -589,68 +589,39 @@ footer #final div img {
 }
 
 #banner_final {
-  margin-top: 5rem;
-  width: 100%;
-  height: 20rem;
-  background-image: url("./imagenes/banner_bottom.png");
-  background-position: top;
-  background-size: cover;
-  display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("./imagenes/banner_bottom.png");
 }
 #banner_final #mensaje_banner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-left: 0rem;
 }
-#banner_final #mensaje_banner h1 {
+#banner_final #mensaje_banner h2 {
   font-family: "Oswald", sans-serif;
   font-size: 3.8rem;
   padding-bottom: 2rem;
   color: rgb(13, 13, 13);
 }
-#banner_final #mensaje_banner h1 b {
+#banner_final #mensaje_banner h2 b {
   font-size: 4.5rem;
   font-weight: 700;
   color: #4C0202;
   letter-spacing: 0.2rem;
 }
-#banner_final #mensaje_banner h2 {
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
-  color: #4C0202;
-}
-#banner_final #mensaje_banner #btn_banner {
-  background-color: #F94F46;
-  width: 11rem;
-  height: 3rem;
-  border-radius: 100rem;
-}
-#banner_final #mensaje_banner #btn_banner a {
-  position: absolute;
-  margin-left: 2rem;
-}
-#banner_final #mensaje_banner #btn_banner a #bt_h2 {
-  font-size: 1rem;
-  color: white;
-}
-#banner_final #mensaje_banner #btn_banner:hover {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
 
 @media screen and (max-width: 1150px) {
-  #banner_de_inicio #mensaje_banner {
+  #banner_de_inicio #mensaje_banner, #banner_final #mensaje_banner {
     padding-left: 5rem;
   }
   #seccion_Explora #tarjetas {
     flex-wrap: wrap;
     justify-content: center;
   }
-  #empresa_descripcion .mensaje h1 {
+  #empresa_descripcion .mensaje h2 {
     font-size: 2rem;
   }
   #empresa_descripcion .mensaje h3 {
@@ -667,16 +638,16 @@ footer #final div img {
   }
 }
 @media screen and (max-width: 830px) {
-  #banner_de_inicio #mensaje_banner {
+  #banner_de_inicio #mensaje_banner, #banner_final #mensaje_banner {
     padding-left: 1.4rem;
   }
-  #banner_de_inicio #mensaje_banner h1 {
+  #banner_de_inicio #mensaje_banner h1, #banner_final #mensaje_banner h1 {
     font-size: 2rem;
   }
-  #banner_de_inicio #mensaje_banner h1 b {
+  #banner_de_inicio #mensaje_banner h1 b, #banner_final #mensaje_banner h1 b {
     font-size: 3.5rem;
   }
-  #banner_de_inicio #mensaje_banner h2 {
+  #banner_de_inicio #mensaje_banner h2, #banner_final #mensaje_banner h2 {
     font-size: 1rem;
   }
   #empresa_descripcion h3 {
@@ -688,7 +659,7 @@ footer #final div img {
   #empresa_descripcion .mensaje {
     margin-top: 0rem;
   }
-  #empresa_descripcion .mensaje h1 {
+  #empresa_descripcion .mensaje h2 {
     text-align: center;
     font-size: 2rem;
   }
@@ -713,22 +684,22 @@ footer #final div img {
   #empresa_descripcion #d2 {
     flex-direction: column-reverse;
   }
-  #banner_final #mensaje_banner h1 {
+  #banner_final #mensaje_banner h2 {
     font-family: "Oswald", sans-serif;
     font-size: 3rem;
   }
 }
 @media screen and (max-width: 660px) {
-  #banner_de_inicio #mensaje_banner {
+  #banner_de_inicio #mensaje_banner, #banner_final #mensaje_banner {
     margin-left: 1rem;
   }
-  #banner_de_inicio #mensaje_banner h1 {
+  #banner_de_inicio #mensaje_banner h1, #banner_final #mensaje_banner h1 {
     font-size: 2rem;
   }
   #empresa_descripcion .mensaje {
     margin-top: 0rem;
   }
-  #empresa_descripcion .mensaje h1 {
+  #empresa_descripcion .mensaje h2 {
     text-align: center;
     font-size: 1.8rem;
   }
@@ -754,25 +725,25 @@ footer #final div img {
   }
 }
 @media screen and (max-width: 450px) {
-  #banner_de_inicio #mensaje_banner {
+  #banner_de_inicio #mensaje_banner, #banner_final #mensaje_banner {
     padding-left: 0rem;
   }
-  #banner_de_inicio #mensaje_banner h1 {
+  #banner_de_inicio #mensaje_banner h1, #banner_final #mensaje_banner h1 {
     font-size: 2rem;
   }
-  #banner_de_inicio #mensaje_banner h1 b {
+  #banner_de_inicio #mensaje_banner h1 b, #banner_final #mensaje_banner h1 b {
     font-size: 2.6rem;
   }
-  #banner_de_inicio #mensaje_banner h2 {
+  #banner_de_inicio #mensaje_banner h2, #banner_final #mensaje_banner h2 {
     font-size: 0.8rem;
   }
-  #seccion_Explora h1 {
+  #seccion_Explora h2 {
     font-size: 1.1rem;
   }
   #empresa_descripcion .mensaje {
     margin-top: 0rem;
   }
-  #empresa_descripcion .mensaje h1 {
+  #empresa_descripcion .mensaje h2 {
     text-align: center;
     font-size: 1.3rem;
   }
@@ -796,7 +767,7 @@ footer #final div img {
   #empresa_descripcion #d2 {
     flex-direction: column-reverse;
   }
-  #banner_final #mensaje_banner h1 {
+  #banner_final #mensaje_banner h2 {
     font-family: "Oswald", sans-serif;
     font-size: 1.5rem;
   }

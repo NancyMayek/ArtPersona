@@ -50,6 +50,7 @@ function closeNav() {
 }
 
 
+
 //PRODUCTOS-------------------------------------------------------------------
 
 const seccion_camisetas =  document.getElementById("Camisetas_Tarjetas");
@@ -90,7 +91,7 @@ camisetas.forEach(item => {
         <h2>${item.nombre}</h2>
         <div>
             <h3>$${item.precio}</h3>
-            <a class="carrito_btn" id="carrito_camiseta_${item.id}"><img src="./imagenes/addicon.png" alt="carrito_btn"></a>
+            <a class="carrito_btn" onclick="addProductToCart('carrito_camiseta_${item.id}', '${item.nombre}', ${item.precio},'${item.imagen}')"  id="carrito_camiseta_${item.id}"><img src="./imagenes/addicon.png" alt="carrito_btn"></a>
         </div>
     </div>
 </div>
@@ -107,7 +108,7 @@ sudaderas.forEach(item => {
         <h2>${item.nombre}</h2>
         <div>
             <h3>$${item.precio}</h3>
-            <a class="carrito_btn" id="carrito_sudadera_${item.id}"><img src="./imagenes/addicon.png" alt="carrito_btn"></a>
+            <a class="carrito_btn" onclick="addProductToCart('carrito_sudadera_${item.id}', '${item.nombre}', ${item.precio},'${item.imagen}')"  id="carrito_sudadera_${item.id}"><img src="./imagenes/addicon.png" alt="carrito_btn"></a>
         </div>
     </div>
 </div>
@@ -124,10 +125,27 @@ tasas.forEach(item => {
         <h2>${item.nombre}</h2>
         <div>
             <h3>$${item.precio}</h3>
-            <a class="carrito_btn" id="carrito_tasa_${item.id}"><img src="./imagenes/addicon.png" alt="carrito_btn"></a>
+            <a class="carrito_btn" onclick="addProductToCart('carrito_tasas_${item.id}', '${item.nombre}', ${item.precio}, '${item.imagen}')"  id="carrito_tasa_${item.id}" > <img src="./imagenes/addicon.png" alt="carrito_btn"> </a>
         </div>
     </div>
 </div>
 ` 
 })
 
+function addProductToCart(id, name, price, image) {
+  let cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
+  let cartItem = cartItems.find(item => item.id === id);
+  if (cartItem) {
+    cartItem.quantity++;
+  } else {
+    cartItem = {
+      id,
+      name,
+      price,
+      image,
+      quantity: 1
+    };
+    cartItems.push(cartItem);
+  }
+  localStorage.setItem('cart', JSON.stringify(cartItems));
+}
