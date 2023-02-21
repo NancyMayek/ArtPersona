@@ -8,14 +8,14 @@ $logo_width: 8.25rem;
 $logo_height: 5.313rem;
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
 }
 
-#banner_de_inicio{
+#banner_de_inicio {
     width: 100%;
     height: 30rem;
     background-image: url("./imagenes/banner2.jpg");
@@ -23,50 +23,59 @@ $logo_height: 5.313rem;
     background-size: cover;
     display: flex;
     align-items: center;
-   
-   
-    #mensaje_banner{
+
+
+    #mensaje_banner {
         padding-left: 13rem;
-       
-        
-        h1{
+
+
+        h1 {
             font-family: $font_Oswald;
             font-size: 3.8rem;
-            
+
             color: white;
-            b{
+
+            b {
                 font-size: 4.5rem;
                 font-weight: 700;
                 color: $color_darkRed;
                 letter-spacing: .2rem;
             }
         }
-        h2{
+
+        h2 {
             padding-top: 1rem;
             padding-bottom: 2rem;
             font-family: $font_Roboto;
             font-size: 1.2rem;
             color: $color_darkRed;
         }
-        #btn_banner{///
+
+        #btn_banner {
+            @include btnPrimario($color_hotpink, white, 11rem, .9rem)
+        }
+
+        #btn_banner:hover{
             
-            @include btnPrimario($color_hotpink,white,11rem,.9rem)
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
         }
     }
 }
 
-#seccion_Explora{
+#seccion_Explora {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 3rem;
-    h1{
+
+    h1 {
         font-family: $font_Oswald;
         font-size: 2.5rem;
         color: $color_darkRed;
     }
 
-    #tarjetas{
+    #tarjetas {
         margin-top: 2rem;
         display: flex;
         flex-wrap: wrap;
@@ -74,23 +83,23 @@ $logo_height: 5.313rem;
         align-items: center;
         justify-content: center;
 
-        #sublimacion{
+        #sublimacion {
             background-image: url("./imagenes/sublimacion.png");
         }
 
-        #diseñoGrafico{
+        #diseñoGrafico {
             background-image: url("./imagenes/graphicdesing.png");
         }
 
-        #cortadoralaser{
+        #cortadoralaser {
             background-image: url("./imagenes/lasercut.png");
         }
 
-        #impresion3D{
+        #impresion3D {
             background-image: url("./imagenes/Impresion3D.png");
         }
-    
-        .tarjeta{
+
+        .tarjeta {
             margin: 1rem;
             padding: 1rem;
             background-position: top;
@@ -99,73 +108,78 @@ $logo_height: 5.313rem;
             width: 15rem;
             height: 30rem;
             display: flex;
-            
+
             align-items: center;
             justify-content: center;
 
-            #descripcion{
+            #descripcion {
                 display: none;
-            
+
                 padding: 1rem;
-                h2{
+
+                h2 {
                     color: white;
                     font-size: 2rem;
-                    font-family:$font_Oswald;
+                    font-family: $font_Oswald;
                 }
-                
+
             }
 
 
 
         }
 
-        
-        .tarjeta:hover{
+
+        .tarjeta:hover {
             background-color: rgba(194, 130, 130, 0.863);
-            #descripcion{
+
+            #descripcion {
                 display: flex;
-                     
+
             }
-        }
-    } 
-
-}
-
-#empresa_descripcion{
-
-    align-items: center;
-    .mensaje{
-        margin-top: 8rem;
-        
-        h1{
-            font-size: 3rem;
-            font-family: $font_Oswald;
-            color: $color_darkRed;
-            font-weight:bolder;
-        }
-        h3{
-            font-size: 1.5rem;
-            font-family: $font_Roboto;
-            
         }
     }
 
-    .decripcion{
+}
+
+#empresa_descripcion {
+
+    align-items: center;
+
+    .mensaje {
+        margin-top: 8rem;
+
+        h1 {
+            font-size: 3rem;
+            font-family: $font_Oswald;
+            color: $color_darkRed;
+            font-weight: bolder;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-family: $font_Roboto;
+
+        }
+    }
+
+    .decripcion {
         margin-top: 5rem;
         display: flex;
         justify-content: space-evenly;
-        .ilustracion{
-            
-            img{
+
+        .ilustracion {
+
+            img {
                 width: 30rem;
             }
         }
 
-        
-    }  
+
+    }
 }
 
-#banner_final{
+#banner_final {
     margin-top: 5rem;
     width: 100%;
     height: 20rem;
@@ -175,37 +189,45 @@ $logo_height: 5.313rem;
     display: flex;
     align-items: center;
     justify-content: center;
-   
-    #mensaje_banner{
+
+    #mensaje_banner {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-       
-        
-        h1{
+
+
+        h1 {
             font-family: $font_Oswald;
             font-size: 3.8rem;
             padding-bottom: 2rem;
-            
+
             color: rgb(13, 13, 13);
-            b{
+
+            b {
                 font-size: 4.5rem;
                 font-weight: 700;
                 color: $color_darkRed;
                 letter-spacing: .2rem;
             }
         }
-        h2{
+
+        h2 {
             padding-top: 1rem;
             padding-bottom: 2rem;
             font-family: $font_Roboto;
             font-size: 1.2rem;
             color: $color_darkRed;
         }
-        #btn_banner{///
+
+        #btn_banner {
+            @include btnPrimario($color_hotpink, white, 11rem, 1rem)
+        }
+
+        #btn_banner:hover{
             
-            @include btnPrimario($color_hotpink,white,11rem,1rem)
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
         }
     }
 }
@@ -217,129 +239,142 @@ $logo_height: 5.313rem;
 
 
 
-@media screen and (max-width: 1150px) { //IPADS
-    
+@media screen and (max-width: 1150px) {
+    //IPADS
 
-    
 
-    #seccion_Explora{
-       
-        #tarjetas{
+
+
+    #seccion_Explora {
+
+        #tarjetas {
             flex-wrap: wrap;
             justify-content: center;
-    
-        } 
+
+        }
     }
 
-    #empresa_descripcion{
-        .mensaje{
-         
-            h1{
-              font-size: 2rem;
+    #empresa_descripcion {
+        .mensaje {
+
+            h1 {
+                font-size: 2rem;
             }
-            h3{
+
+            h3 {
 
                 font-size: 1rem;
             }
         }
-    
-        .decripcion{
-            .ilustracion{
+
+        .decripcion {
+            .ilustracion {
                 margin-left: 1rem;
-                img{
+
+                img {
                     width: 22rem;
                 }
             }
-    
-            #i2{
-                img{
+
+            #i2 {
+                img {
                     margin-right: 1rem;
                 }
             }
-              
+
         }
-          
+
     }
 
-  
-    
-        
+
+
+
 }
 
-@media screen and (max-width: 870px) { //LARGE
-  
+@media screen and (max-width: 870px) {
+    //LARGE
 
-    #empresa_descripcion{
+
+    #empresa_descripcion {
         margin-top: 4rem;
-        .mensaje{
-         
-            h1{
-              font-size: 1.5rem;
+
+        .mensaje {
+
+            h1 {
+                font-size: 1.5rem;
             }
-            h3{
+
+            h3 {
 
                 font-size: .8rem;
             }
         }
-    
-        .decripcion{
+
+        .decripcion {
             margin-top: 1rem;
-            .ilustracion{
+
+            .ilustracion {
                 margin-left: 0rem;
-                img{
+
+                img {
                     width: 20rem;
                 }
             }
-    
-            #i2{
-                img{
+
+            #i2 {
+                img {
                     margin-right: 0rem;
                 }
             }
-            
-    
+
+
         }
-    
-        
+
+
     }
 
-     
+
 }
 
-@media screen and (max-width: 750px) { //LARGE
-  
+@media screen and (max-width: 750px) {
+    //LARGE
 
-    #banner_de_inicio{
+
+    #banner_de_inicio {
         flex-direction: column-reverse;
         align-items: center;
-        
-        #mensaje_banner{
+
+        #mensaje_banner {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-left: 1rem;
-            
-            h1{
+
+            h1 {
                 font-family: $font_Roboto;
                 text-align: center;
                 font-size: 3rem;
                 color: white;
             }
-            #msg{
+
+            #msg {
                 display: none;
             }
-            #btn_banner{
-                
+
+            #btn_banner {
+
                 margin-top: 1rem;
                 background-color: $color_hotpink ;
                 width: 10rem;
                 height: 3rem;
                 border-radius: 100rem;
-                a{
-                    position:absolute;
+
+                a {
+                    position: absolute;
                     margin-top: .3rem;
-                    margin-left:2rem;
-                    #bt_h2{
+                    margin-left: 2rem;
+
+                    #bt_h2 {
                         font-size: .8rem;
                     }
                 }
@@ -347,188 +382,202 @@ $logo_height: 5.313rem;
         }
     }
 
-    #empresa_descripcion{
-        h3{
-            order:3;
+    #empresa_descripcion {
+        h3 {
+            order: 3;
             text-align: center;
             font-family: $font_Roboto;
             font-size: 1rem;
         }
 
-        .mensaje{
+        .mensaje {
             margin-top: 0rem;
-            h1{
+
+            h1 {
                 text-align: center;
                 font-size: 2rem;
             }
-            h3{
+
+            h3 {
                 text-justify: distribute;
             }
         }
-    
-        .decripcion{
+
+        .decripcion {
             margin-top: 1rem;
             display: flex;
             flex-direction: column;
-    
-            .ilustracion{
+
+            .ilustracion {
                 margin-left: 0rem;
-                img{
+
+                img {
                     width: 25rem;
                 }
             }
-    
-            #i2{
-                img{
+
+            #i2 {
+                img {
                     margin-right: 4rem;
                 }
             }
-            
-    
+
+
         }
 
 
-        #d2{
+        #d2 {
             flex-direction: column-reverse;
         }
-    
-        
+
+
     }
 
-    
-    
+
+
 }
 
-@media screen and (max-width: 660px) { //LARGE
+@media screen and (max-width: 660px) {
+    //LARGE
 
 
-    #banner_de_inicio{
-     
-       
-        #mensaje_banner{
+    #banner_de_inicio {
+
+
+        #mensaje_banner {
             margin-left: 1rem;
-            
-            h1{         
+
+            h1 {
                 font-size: 2rem;
             }
-         
+
         }
     }
 
-   
 
-    #empresa_descripcion{
-      
-        .mensaje{
+
+    #empresa_descripcion {
+
+        .mensaje {
             margin-top: 0rem;
-            h1{
+
+            h1 {
                 text-align: center;
                 font-size: 1.8rem;
             }
-            h3{
+
+            h3 {
                 text-justify: distribute;
             }
         }
-    
-        .decripcion{
+
+        .decripcion {
             margin-top: 1rem;
             display: flex;
             flex-direction: column;
-    
-            .ilustracion{
+
+            .ilustracion {
                 margin-left: 0rem;
-                img{
+
+                img {
                     width: 25rem;
                 }
             }
-    
-            #i2{
-                img{
+
+            #i2 {
+                img {
                     margin-right: 4rem;
                 }
             }
-            
-    
+
+
         }
 
 
-        #d2{
+        #d2 {
             flex-direction: column-reverse;
         }
-    
-        
+
+
     }
 
 
 }
 
-@media screen and (max-width: 420px) { //LARGE
-    
+@media screen and (max-width: 420px) {
+    //LARGE
 
-    #banner_de_inicio{
-     
-        div{
+
+    #banner_de_inicio {
+
+        div {
             margin-top: 0rem;
-            img{
+
+            img {
                 width: 15rem;
             }
         }
-        #mensaje_banner{
+
+        #mensaje_banner {
             margin-left: 1rem;
             margin-top: 5rem;
-            h1{         
+
+            h1 {
                 font-size: 2rem;
             }
-         
+
         }
     }
 
-    #seccion_Explora{
-        h1{
+    #seccion_Explora {
+        h1 {
             font-size: 1.1rem;
         }
     }
 
-    #empresa_descripcion{
-      
-        .mensaje{
+    #empresa_descripcion {
+
+        .mensaje {
             margin-top: 0rem;
-            h1{
+
+            h1 {
                 text-align: center;
                 font-size: 1.3rem;
             }
-            h3{
+
+            h3 {
                 text-justify: distribute;
             }
         }
-    
-        .decripcion{
+
+        .decripcion {
             margin-top: 1rem;
             display: flex;
             flex-direction: column;
-    
-            .ilustracion{
+
+            .ilustracion {
                 margin-left: 0rem;
-                img{
+
+                img {
                     width: 15rem;
                 }
             }
-    
-            #i2{
-                img{
+
+            #i2 {
+                img {
                     margin-right: 0rem;
                 }
             }
-            
-    
+
+
         }
 
 
-        #d2{
+        #d2 {
             flex-direction: column-reverse;
         }
-    
-        
+
+
     }
-    
+
 }

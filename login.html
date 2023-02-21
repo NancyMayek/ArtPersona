@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
-
 <body>
     <header >
 
@@ -36,7 +33,7 @@
                 <img src="./imagenes/search.png" alt="buscar">
             </div>
             <div>
-                <a href="login.html"><img src="./imagenes/user.png" alt="user"></a>
+                <a href="login.hml"><img src="./imagenes/user.png" alt="user"></a>
                 <div onclick="openNav()"><img src="./imagenes/cart.png" alt="cart"></div>
 
                 <div id="menu-btn">
@@ -87,85 +84,33 @@
         </div>
 
     </div>
-
-    <div id="banner_productos">
-        <div id="mensaje_banner">
-            <h1>¡TODOS LOS PRODUCTOS PUEDEN SER PERSONALIZADOS!</h1>
-
+    <div class="container">
+        <div class="card">
+            <div class="card-image">	
+                <h2 class="card-heading">
+                    ¡EMPIEZA AHORA!
+                    <small>Crea tu cuenta</small>
+                </h2>
+            </div>
+            <form class="card-form">
+                <div class="input">
+                    <input type="text" class="input-field" required/>
+                    <label class="input-label">Nombre completo</label>
+                </div>
+                            <div class="input">
+                    <input type="text" class="input-field"  required/>
+                    <label class="input-label">Email</label>
+                </div>
+                            <div class="input">
+                    <input type="password" class="input-field" required/>
+                    <label class="input-label">Password</label>
+                </div>
+                <div class="action">
+                    <button class="action-button">CREAR CUENTA</button>
+                </div>
+            </form>
+            
         </div>
     </div>
-
-    <div id="sec_productos">
-
-        <div id="Camisetas" class="categorias">
-            <div class="categorias_titulo">
-                <h2>Camisetas</h2>
-                <hr>
-            </div>
-            <div class="product_tarjetas" id="Camisetas_Tarjetas">
-
-            </div>
-        </div>
-
-        <div id="Sudaderas" class="categorias">
-            <div class="categorias_titulo">
-                <h2>Sudaderas</h2>
-                <hr>
-            </div>
-            <div class="product_tarjetas" id="Sudaderas_Tarjetas">
-
-            </div>
-        </div>
-
-        <div id="Tasas" class="categorias">
-            <div class="categorias_titulo">
-                <h2>Tasas</h2>
-                <hr>
-            </div>
-            <div class="product_tarjetas" id="Tasas_Tarjetas">
-
-            </div>
-        </div>
-
-
-    </div>
-
-    <footer>
-        <div id="footer_link">
-            <div id="logo">
-                <img src="./imagenes/logo_black.png" alt="logo ArtPersona">
-            </div>
-            <div id="link_nav">
-                <ul>
-                    <li><a>
-                            <h4>INICIO</h4>
-                        </a></li>
-                    <li><a>
-                            <h4>PRODUCTOS</h4>
-                        </a></li>
-                    <li><a>
-                            <h4>SERVICIOS</h4>
-                        </a></li>
-                    <li><a>
-                            <h4>ENTREGAS</h4>
-                        </a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="final">
-            <h4>Terminos y Condiciones</h4>
-            <div>
-
-                <a><img src="./imagenes/facebook.png" alt="facebook"></a>
-                <a><img src="./imagenes/instagram.png" alt="instagram"></a>
-                <a><img src="./imagenes/whatsapp.png" alt="whatsapp"></a>
-
-            </div>
-        </div>
-    </footer>
-
-    <script src="main.js"></script>
 </body>
-
 </html>

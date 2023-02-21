@@ -1,14 +1,40 @@
-@mixin btnPrimario($colorfondo,$color_texto,$ancho,$fontSize){
+@mixin btnPrimario($colorfondo, $color_texto, $ancho, $fontSize) {
     background-color: $colorfondo ;
     width: $ancho;
     height: 3rem;
     border-radius: 100rem;
-            a{
-                position:absolute;
-                margin-left:2rem;
-                #bt_h2{
-                    font-size: $fontSize;
-                    color:$color_texto;
-                }
-            }
+
+    a {
+        position: absolute;
+        margin-left: 2rem;
+
+        #bt_h2 {
+            font-size: $fontSize;
+            color: $color_texto;
+        }
+    }
+   
+}
+
+@mixin btnSecundario($colorfondo, $color_texto, $ancho, $fontSize, $font_family) {
+    background-color: $colorfondo ;
+    border: 2px solid black;
+    width: $ancho;
+    height: 3rem;
+    border-radius: 1rem;
+
+    a {
+        margin-top: .9rem;
+        position: absolute;
+        margin-left: 2rem;
+
+        #bt_h2 {
+            font-weight: bolder;
+            font-size: $fontSize;
+            color: $color_texto;
+            font-family: $font_family;
+        }
+    }
+
+   
 }

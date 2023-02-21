@@ -26,8 +26,9 @@ $logo_height: 5.313rem;
 	}
 }
 
+
 header{
-   
+   text-decoration: none;
     display:flex;
     justify-content: space-around;
     align-items: center;
@@ -111,6 +112,7 @@ header{
 
 }
 
+
 #link_nav_2{  
     display: none;
     flex-direction: column;
@@ -160,6 +162,61 @@ header{
         }
     }
 
+}
+
+.sidenav {
+    height: 100vh; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position:fixed;/* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: $color_searchbar; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 2rem;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+    h2,h3,a{
+    font-family: $font_poopins500;
+    padding-left: 3rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #352424;
+    display: block;
+    transition: 0.3s;
+    }
+
+    a{
+        font-size: 1.5rem;
+    }
+
+    #carrito_top{
+        display: flex;
+        align-items: center;
+    }
+
+    .carrito_item{
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        padding:1rem;
+        img{
+            border-radius: 20%;
+            width: 4rem;
+            height: 5rem;
+        }
+    }
+
+    #total{
+        display: flex;
+        justify-content: right;
+        #precio_total{
+            font-size: 1.2rem;
+            padding-right: 1rem;
+        }
+    }
+
+    
 }
 
 @media screen and (max-width: 1150px) { //IPADS
