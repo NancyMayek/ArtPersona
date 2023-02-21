@@ -1,3 +1,5 @@
+
+//BURGER MENU-----------------------------------------------------
 const menuBtn = document.querySelector('#menu-btn');
 let menuOpen = false;
 
@@ -33,7 +35,7 @@ function toggleDisplay() {
 
 window.addEventListener('resize', toggleDisplay);
 
-
+//CARRITO----------------------------------------------------------------
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
@@ -47,6 +49,8 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
 }
 
+
+//PRODUCTOS-------------------------------------------------------------------
 
 const seccion_camisetas =  document.getElementById("Camisetas_Tarjetas");
 const seccion_sudaderas =  document.getElementById("Sudaderas_Tarjetas");
@@ -103,7 +107,7 @@ sudaderas.forEach(item => {
         <h2>${item.nombre}</h2>
         <div>
             <h3>$${item.precio}</h3>
-            <a class="carrito_btn" id="carrito_camiseta_${item.id}"><img src="./imagenes/addicon.png" alt="carrito_btn"></a>
+            <a class="carrito_btn" id="carrito_sudadera_${item.id}"><img src="./imagenes/addicon.png" alt="carrito_btn"></a>
         </div>
     </div>
 </div>
@@ -120,7 +124,7 @@ tasas.forEach(item => {
         <h2>${item.nombre}</h2>
         <div>
             <h3>$${item.precio}</h3>
-            <a class="carrito_btn" id="carrito_camiseta_${item.id}"><img src="./imagenes/addicon.png" alt="carrito_btn"></a>
+            <a class="carrito_btn" id="carrito_tasa_${item.id}"><img src="./imagenes/addicon.png" alt="carrito_btn"></a>
         </div>
     </div>
 </div>

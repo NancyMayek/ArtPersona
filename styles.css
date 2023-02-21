@@ -643,6 +643,9 @@ footer #final div img {
 }
 
 @media screen and (max-width: 1150px) {
+  #banner_de_inicio #mensaje_banner {
+    padding-left: 5rem;
+  }
   #seccion_Explora #tarjetas {
     flex-wrap: wrap;
     justify-content: center;
@@ -663,63 +666,18 @@ footer #final div img {
     margin-right: 1rem;
   }
 }
-@media screen and (max-width: 870px) {
-  #empresa_descripcion {
-    margin-top: 4rem;
-  }
-  #empresa_descripcion .mensaje h1 {
-    font-size: 1.5rem;
-  }
-  #empresa_descripcion .mensaje h3 {
-    font-size: 0.8rem;
-  }
-  #empresa_descripcion .decripcion {
-    margin-top: 1rem;
-  }
-  #empresa_descripcion .decripcion .ilustracion {
-    margin-left: 0rem;
-  }
-  #empresa_descripcion .decripcion .ilustracion img {
-    width: 20rem;
-  }
-  #empresa_descripcion .decripcion #i2 img {
-    margin-right: 0rem;
-  }
-}
-@media screen and (max-width: 750px) {
-  #banner_de_inicio {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
+@media screen and (max-width: 830px) {
   #banner_de_inicio #mensaje_banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 1rem;
+    padding-left: 1.4rem;
   }
   #banner_de_inicio #mensaje_banner h1 {
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    font-size: 3rem;
-    color: white;
+    font-size: 2rem;
   }
-  #banner_de_inicio #mensaje_banner #msg {
-    display: none;
+  #banner_de_inicio #mensaje_banner h1 b {
+    font-size: 3.5rem;
   }
-  #banner_de_inicio #mensaje_banner #btn_banner {
-    margin-top: 1rem;
-    background-color: #F94F46;
-    width: 10rem;
-    height: 3rem;
-    border-radius: 100rem;
-  }
-  #banner_de_inicio #mensaje_banner #btn_banner a {
-    position: absolute;
-    margin-top: 0.3rem;
-    margin-left: 2rem;
-  }
-  #banner_de_inicio #mensaje_banner #btn_banner a #bt_h2 {
-    font-size: 0.8rem;
+  #banner_de_inicio #mensaje_banner h2 {
+    font-size: 1rem;
   }
   #empresa_descripcion h3 {
     order: 3;
@@ -741,6 +699,7 @@ footer #final div img {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   #empresa_descripcion .decripcion .ilustracion {
     margin-left: 0rem;
@@ -749,10 +708,14 @@ footer #final div img {
     width: 25rem;
   }
   #empresa_descripcion .decripcion #i2 img {
-    margin-right: 4rem;
+    margin-right: 1rem;
   }
   #empresa_descripcion #d2 {
     flex-direction: column-reverse;
+  }
+  #banner_final #mensaje_banner h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 660px) {
@@ -790,19 +753,18 @@ footer #final div img {
     flex-direction: column-reverse;
   }
 }
-@media screen and (max-width: 420px) {
-  #banner_de_inicio div {
-    margin-top: 0rem;
-  }
-  #banner_de_inicio div img {
-    width: 15rem;
-  }
+@media screen and (max-width: 450px) {
   #banner_de_inicio #mensaje_banner {
-    margin-left: 1rem;
-    margin-top: 5rem;
+    padding-left: 0rem;
   }
   #banner_de_inicio #mensaje_banner h1 {
     font-size: 2rem;
+  }
+  #banner_de_inicio #mensaje_banner h1 b {
+    font-size: 2.6rem;
+  }
+  #banner_de_inicio #mensaje_banner h2 {
+    font-size: 0.8rem;
   }
   #seccion_Explora h1 {
     font-size: 1.1rem;
@@ -833,6 +795,10 @@ footer #final div img {
   }
   #empresa_descripcion #d2 {
     flex-direction: column-reverse;
+  }
+  #banner_final #mensaje_banner h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
   }
 }
 #banner_productos {
@@ -936,6 +902,18 @@ footer #final div img {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+@media screen and (max-width: 1350px) {
+  #banner_productos #mensaje_banner h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 660px) {
+  #banner_productos #mensaje_banner h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
 #servicios_container {
   padding: 3rem;
 }
@@ -1033,6 +1011,102 @@ footer #final div img {
   left: 7rem;
 }
 
+@media screen and (max-width: 1350px) {
+  #servicios_container {
+    padding: 3rem;
+  }
+  #servicios_container .servicio {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5rem;
+  }
+  #servicios_container .imagen_serv {
+    height: 20rem;
+    width: 32rem;
+    border-radius: 324.5px 0px;
+    border-radius: 200px 0px;
+  }
+  #servicios_container .imagen_serv img {
+    height: 20rem;
+    width: 32rem;
+    border-radius: 300px 0px;
+  }
+  #servicios_container #Sublimacion .imagen_serv {
+    background-color: #F46E6E;
+  }
+  #servicios_container #Sublimacion .descripcion_serv {
+    margin-left: 0.5rem;
+    left: 0rem;
+  }
+  #servicios_container #diseñoGrafico .imagen_serv {
+    background-color: #FED9D9;
+  }
+  #servicios_container #diseñoGrafico .descripcion_serv {
+    left: 0rem;
+  }
+  #servicios_container #laser .imagen_serv {
+    background-color: #FFF1C1;
+  }
+  #servicios_container #laser .descripcion_serv {
+    margin-left: 0.5rem;
+    left: 0rem;
+  }
+  #servicios_container #impr3D .imagen_serv {
+    background-color: #F4BF6E;
+  }
+  #servicios_container #impr3D .descripcion_serv {
+    left: 0rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  #servicios_container {
+    padding: 3rem;
+  }
+  #servicios_container .servicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 5rem;
+  }
+  #servicios_container .imagen_serv {
+    display: none;
+    height: 20rem;
+    width: 32rem;
+    border-radius: 324.5px 0px;
+    border-radius: 200px 0px;
+  }
+  #servicios_container .imagen_serv img {
+    height: 20rem;
+    width: 32rem;
+    border-radius: 300px 0px;
+  }
+  #servicios_container #Sublimacion .imagen_serv {
+    background-color: #F46E6E;
+  }
+  #servicios_container #Sublimacion .descripcion_serv {
+    margin-left: 0.5rem;
+    left: 0rem;
+  }
+  #servicios_container #diseñoGrafico .imagen_serv {
+    background-color: #FED9D9;
+  }
+  #servicios_container #diseñoGrafico .descripcion_serv {
+    left: 0rem;
+  }
+  #servicios_container #laser .imagen_serv {
+    background-color: #FFF1C1;
+  }
+  #servicios_container #laser .descripcion_serv {
+    margin-left: 0.5rem;
+    left: 0rem;
+  }
+  #servicios_container #impr3D .imagen_serv {
+    background-color: #F4BF6E;
+  }
+  #servicios_container #impr3D .descripcion_serv {
+    left: 0rem;
+  }
+}
 img {
   max-width: 100%;
   display: block;

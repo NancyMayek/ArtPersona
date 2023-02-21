@@ -135,3 +135,35 @@
 
 
 }
+
+@media screen and (max-width: 1350px) { 
+    #banner_productos {
+    
+        #mensaje_banner {
+    
+            h1 {
+          
+                font-size: 3rem;
+                text-align: center;
+    
+            }
+    
+        }
+    }
+}
+
+@media screen and (max-width: 660px) { 
+    #banner_productos {
+    
+        #mensaje_banner {
+    
+            h1 {
+          
+                font-size: 2rem;
+                text-align: center;
+    
+            }
+    
+        }
+    }
+}

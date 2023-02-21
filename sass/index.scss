@@ -240,11 +240,13 @@ $logo_height: 5.313rem;
 
 
 @media screen and (max-width: 1150px) {
-    //IPADS
+    #banner_de_inicio {
+        #mensaje_banner {
+            padding-left: 5rem;
 
-
-
-
+        }
+    }
+    
     #seccion_Explora {
 
         #tarjetas {
@@ -286,99 +288,35 @@ $logo_height: 5.313rem;
 
     }
 
-
-
-
 }
 
-@media screen and (max-width: 870px) {
-    //LARGE
 
 
-    #empresa_descripcion {
-        margin-top: 4rem;
-
-        .mensaje {
-
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            h3 {
-
-                font-size: .8rem;
-            }
-        }
-
-        .decripcion {
-            margin-top: 1rem;
-
-            .ilustracion {
-                margin-left: 0rem;
-
-                img {
-                    width: 20rem;
-                }
-            }
-
-            #i2 {
-                img {
-                    margin-right: 0rem;
-                }
-            }
-
-
-        }
-
-
-    }
-
-
-}
-
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 830px) {
     //LARGE
 
 
     #banner_de_inicio {
-        flex-direction: column-reverse;
-        align-items: center;
-
         #mensaje_banner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: 1rem;
-
+            padding-left: 1.4rem;
+    
+    
             h1 {
-                font-family: $font_Roboto;
-                text-align: center;
-                font-size: 3rem;
-                color: white;
-            }
-
-            #msg {
-                display: none;
-            }
-
-            #btn_banner {
-
-                margin-top: 1rem;
-                background-color: $color_hotpink ;
-                width: 10rem;
-                height: 3rem;
-                border-radius: 100rem;
-
-                a {
-                    position: absolute;
-                    margin-top: .3rem;
-                    margin-left: 2rem;
-
-                    #bt_h2 {
-                        font-size: .8rem;
-                    }
+                
+                font-size: 2rem;
+    
+    
+                b {
+                    font-size: 3.5rem;
                 }
             }
+    
+            h2 {
+                font-size: 1rem;
+                
+            }
+    
+            
         }
     }
 
@@ -407,6 +345,7 @@ $logo_height: 5.313rem;
             margin-top: 1rem;
             display: flex;
             flex-direction: column;
+            align-items: center;
 
             .ilustracion {
                 margin-left: 0rem;
@@ -418,7 +357,7 @@ $logo_height: 5.313rem;
 
             #i2 {
                 img {
-                    margin-right: 4rem;
+                    margin-right: 1rem;
                 }
             }
 
@@ -433,13 +372,24 @@ $logo_height: 5.313rem;
 
     }
 
+    #banner_final {
+       
+        #mensaje_banner {
 
-
+            h1 {
+                font-family: $font_Oswald;
+                font-size: 3rem;
+               
+            }
+    
+        }
+    }
 }
 
 @media screen and (max-width: 660px) {
     //LARGE
 
+    
 
     #banner_de_inicio {
 
@@ -504,30 +454,33 @@ $logo_height: 5.313rem;
 
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
     //LARGE
-
-
     #banner_de_inicio {
-
-        div {
-            margin-top: 0rem;
-
-            img {
-                width: 15rem;
-            }
-        }
-
         #mensaje_banner {
-            margin-left: 1rem;
-            margin-top: 5rem;
-
+            padding-left: 0rem;
+    
+    
             h1 {
+                
                 font-size: 2rem;
+    
+    
+                b {
+                    font-size: 2.6rem;
+                }
             }
-
+    
+            h2 {
+                font-size: .8rem;
+                
+            }
+    
+            
         }
     }
+
+    
 
     #seccion_Explora {
         h1 {
@@ -579,5 +532,20 @@ $logo_height: 5.313rem;
 
 
     }
+
+    
+    #banner_final {
+       
+        #mensaje_banner {
+
+            h1 {
+                font-family: $font_Oswald;
+                font-size: 1.5rem;
+               
+            }
+    
+        }
+    }
+
 
 }

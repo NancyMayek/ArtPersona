@@ -98,3 +98,155 @@
         
     }
 }
+
+@media screen and (max-width: 1350px) {
+    #servicios_container{
+        padding: 3rem;
+        .servicio{
+            display: flex;
+            justify-content:space-evenly;
+            padding-bottom: 5rem;
+        }
+        .imagen_serv{
+            height: 20rem;
+            width: 32rem;
+            border-radius: 324.5px 0px;
+            border-radius: 200px 0px;
+            
+            img{
+                height: 20rem;
+                width: 32rem;
+                border-radius: 300px 0px;
+            }
+        }
+    
+        
+    
+        #Sublimacion{
+    
+            .imagen_serv{
+                background-color:#F46E6E;
+            }
+    
+            .descripcion_serv{
+               margin-left: .5rem;
+                left:0rem;
+            }
+            
+        }
+    
+        #diseñoGrafico{
+    
+            .imagen_serv{
+                background-color:#FED9D9;
+            }
+            .descripcion_serv{
+               
+                left:0rem;
+            }
+            
+        }
+    
+        #laser{
+    
+            .imagen_serv{
+                background-color:#FFF1C1;
+            }
+    
+            .descripcion_serv{
+                margin-left: .5rem;
+                left:0rem;
+            }
+            
+        }
+    
+        #impr3D{
+    
+            .imagen_serv{
+                background-color:#F4BF6E;
+            }
+            .descripcion_serv{
+               
+                left:0rem;
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    #servicios_container{
+        padding: 3rem;
+        .servicio{
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+            padding-bottom: 5rem;
+        }
+        .imagen_serv{
+            display: none;
+            height: 20rem;
+            width: 32rem;
+            border-radius: 324.5px 0px;
+            border-radius: 200px 0px;
+            
+            img{
+                height: 20rem;
+                width: 32rem;
+                border-radius: 300px 0px;
+            }
+        }
+    
+        
+    
+        #Sublimacion{
+    
+            .imagen_serv{
+                background-color:#F46E6E;
+            }
+    
+            .descripcion_serv{
+               margin-left: .5rem;
+                left:0rem;
+            }
+            
+        }
+    
+        #diseñoGrafico{
+    
+            .imagen_serv{
+                background-color:#FED9D9;
+            }
+            .descripcion_serv{
+               
+                left:0rem;
+            }
+            
+        }
+    
+        #laser{
+    
+            .imagen_serv{
+                background-color:#FFF1C1;
+            }
+    
+            .descripcion_serv{
+                margin-left: .5rem;
+                left:0rem;
+            }
+            
+        }
+    
+        #impr3D{
+    
+            .imagen_serv{
+                background-color:#F4BF6E;
+            }
+            .descripcion_serv{
+               
+                left:0rem;
+            }
+            
+        }
+    }
+}
