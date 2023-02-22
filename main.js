@@ -48,33 +48,81 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
+
+
+function calcularCantidad(id, cantidad, precio){
+  let unidad_precio = cantidad * precio;
+  const item_precio = document.getElementById(id);
+  item_precio.innerHTML= "$"+ unidad_precio;
+}
+
+
 function añadir_carrito(){
  const cartDiv = document.getElementById('productos_carrito');
-  const totalPriceP = document.getElementById('precio_total');
   const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
-  let totalPrice = 0;
   cartDiv.innerHTML=""; 
-
+ 
   cartItems.forEach(item => {
-
+   
     cartDiv.innerHTML+= 
     `
-      <div class="carrito_item">
+      <div class="carrito_item" id="carrito_item_${item.id}">
                 <img id="imagen" src="${item.image}">
                 <h3 id="nombre">${item.name}</h3>
                 <div id="cantidad_container">
                     <div id="botones_cantidad">
-                        <button  onclick="addCantidad()" class="boton_blanco" id="btn_add">+</button>
-                        <button onclick="subCantidad()" class="boton_blanco" id="btn_menos">-</button>
+                        <button class="boton_blanco" id="btn_add_${item.id}" >+</button>
+                        <button class="boton_blanco" id="btn_sub_${item.id}">-</button>
                     </div>
-                    <h3 id="cantidad">${item.quantity}</h3>
+                    <h3 id="cantidad_${item.id}">${item.quantity}</h3>
                 </div>
                 <h3 id="precio_${item.id}">$${item.price}</h3>
-                <button  onclick="borrarItem()" id="btn_borrar">Borrar</button>
+                <button  onclick="borrarItem()" class="btn_borrar" id="btn_borrar_${item.id}">Borrar</button>
             </div>
     `
   });
+
+  cartItems.forEach(item => {
+
+    const plusButton =  document.getElementById('btn_add_'+item.id);
+    const subButton =  document.getElementById('btn_sub_'+item.id);
+    const borrarButton =  document.getElementById('btn_borrar_'+item.id);
+
+    console.log("btn:",plusButton);
+    const item_cantidad =  document.getElementById('cantidad_'+item.id);
+    const carrito_div = document.getElementById('carrito_item_'+item.id);
+
+   
+    plusButton.addEventListener('click', () => {
+      item.quantity++;
+      item_cantidad.innerHTML=item.quantity;
+      localStorage.setItem('cart', JSON.stringify(cartItems));
+      calcularCantidad('precio_'+item.id,item.quantity,item.price);
+    });
+
+    subButton.addEventListener('click', () => {
+      item.quantity--;
+      item_cantidad.innerHTML=item.quantity;
+      localStorage.setItem('cart', JSON.stringify(cartItems));
+      calcularCantidad('precio_'+item.id,item.quantity,item.price);
+    });
+
+
+    borrarButton.addEventListener('click', () => {
+      const itemIndex = cartItems.findIndex(cartItem => cartItem.id === item.id);
+      if (itemIndex !== -1) {
+        cartItems.splice(itemIndex, 1);
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+        carrito_div.remove();
+      }
+    });
+
+
+    
+    calcularCantidad('precio_'+item.id,item.quantity,item.price);
+  });
 }
+
 
 
 
@@ -180,29 +228,6 @@ function addProductToCart(id, name, price, image) {
   }
   localStorage.setItem('cart', JSON.stringify(cartItems));
 
-  const cartDiv = document.getElementById('productos_carrito');
+  añadir_carrito();
   
-  
-  let totalPrice = 0;
-  cartDiv.innerHTML=""; 
-
-  cartItems.forEach(item => {
-
-    cartDiv.innerHTML+= 
-    `
-      <div class="carrito_item">
-                <img id="imagen" src="${item.image}">
-                <h3 id="nombre">${item.name}</h3>
-                <div id="cantidad_container">
-                    <div id="botones_cantidad">
-                        <button  onclick="addCantidad()" class="boton_blanco" id="btn_add">+</button>
-                        <button onclick="subCantidad()" class="boton_blanco" id="btn_menos">-</button>
-                    </div>
-                    <h3 id="cantidad">${item.quantity}</h3>
-                </div>
-                <h3 id="precio_${item.id}">$${item.price}</h3>
-                <button  onclick="borrarItem()" id="btn_borrar">Borrar</button>
-            </div>
-    `
-  });
 }

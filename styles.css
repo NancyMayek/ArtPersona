@@ -1186,16 +1186,16 @@ input {
 .sidenav .carrito_item #cantidad_container #cantidad {
   padding-left: 1rem;
 }
-.sidenav .carrito_item .boton_blanco, .sidenav .carrito_item #btn_borrar {
+.sidenav .carrito_item .boton_blanco, .sidenav .carrito_item .btn_borrar {
   background-color: white;
   width: 1rem;
   border: none;
 }
-.sidenav .carrito_item .boton_blanco:hover, .sidenav .carrito_item #btn_borrar:hover {
+.sidenav .carrito_item .boton_blanco:hover, .sidenav .carrito_item .btn_borrar:hover {
   background-color: #F94F46;
   color: white;
 }
-.sidenav .carrito_item #btn_borrar {
+.sidenav .carrito_item .btn_borrar {
   width: 4rem;
   background-color: #f7ebeb;
   color: #F94F46;

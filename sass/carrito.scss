@@ -64,7 +64,7 @@
             color: white;
         }
     
-        #btn_borrar {
+        .btn_borrar {
             @extend .boton_blanco;
             width: 4rem;
             background-color: $color_searchbar;
