@@ -151,10 +151,6 @@ function añadir_carrito(){
 
 
 
-
-
-
-
 //PRODUCTOS-------------------------------------------------------------------
 
 const seccion_camisetas =  document.getElementById("Camisetas_Tarjetas");
@@ -256,3 +252,4 @@ function addProductToCart(id, name, price, image) {
   añadir_carrito();
   
 }
+

@@ -502,9 +502,10 @@ footer #final div img {
 #seccion_Explora #tarjetas .tarjeta #descripcion {
   display: none;
   padding: 1rem;
+  background-color: #F94F46;
 }
 #seccion_Explora #tarjetas .tarjeta #descripcion h2 {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 2rem;
   font-family: "Oswald", sans-serif;
 }
@@ -932,6 +933,42 @@ footer #final div img {
 }
 #servicios_container #impr3D .descripcion_serv {
   left: 7rem;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  color: #F94F46;
+  padding-top: 2rem;
+}
+
+.container {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px 300px;
+  grid-gap: 10px;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+}
+.gallery-item .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.gallery-item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  transition: 0.5s ease-in-out;
+}
+.gallery-item .image img:hover {
+  transform: scale(1.5);
 }
 
 @media screen and (max-width: 1350px) {

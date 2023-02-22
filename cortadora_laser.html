@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtPersona</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
-
         <div id="logo">
             <a href="index.html"><img src="./imagenes/logo.png" alt="logo ArtPersona"></a>
         </div>
@@ -75,88 +72,9 @@
         </div>
 
     </div>
-
-    <main>
-        </div>
-        <div id="servicios_container">
-            <div class="servicio" id="Sublimacion">
-                <div class="imagen_serv">
-                    <img src="./imagenes/serv_subli.jpg" alt="Sublimacion">
-                </div>
-                <div class="descripcion_serv">
-                    <h2>Sublimación</h2>
-                    <p>Estamos aquí para hacer que sus productos<br>
-                        sean únicos con diseños vibrantes a todo color<br>
-                        que resistirán la prueba del tiempo.</p>
-
-                    <div class="btn_empty">
-                        <a href="sublimacion.html">
-                            <h2 id="bt_h2">CONONCER MÁS</h2>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="servicio" id="diseñoGrafico">
-
-                <div class="descripcion_serv">
-                    <h2>Diseño Grafico</h2>
-                    <p>¡Dale vida a tu visión con nuestros servicios<br>
-                        de diseño gráfico!</p>
-
-                    <div class="btn_empty">
-                        <a href="diseño_grafico.html">
-                            <h2 id="bt_h2">CONONCER MÁS</h2>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="imagen_serv">
-                    <img src="./imagenes/serv_graf.jpg" alt="Diseño Grafico">
-                </div>
-            </div>
-
-            <div class="servicio" id="laser">
-                <div class="imagen_serv">
-                    <img src="./imagenes/lasercut.png" alt="Corte Laser">
-                </div>
-                <div class="descripcion_serv">
-                    <h2>Cortadora Laser</h2>
-                    <p>Nuestra tecnología de corte puede crear<br>
-                        diseños intrincados con velocidad y precisión,<br>
-                        lo que da como resultado un hermoso producto.</p>
-
-                    <div class="btn_empty">
-                        <a href="cortadora_laser.html">
-                            <h2 id="bt_h2">CONONCER MÁS</h2>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="servicio" id="impr3D">
-
-                <div class="descripcion_serv">
-                    <h2>Impresión 3D</h2>
-                    <p>Con el poder de la tecnología, podemos <br>
-                        convertir sus diseños digitales en objetos<br>
-                        reales y tangibles.</p>
-
-                    <div class="btn_empty">
-                        <a href="Impresion3D.html">
-                            <h2 id="bt_h2">CONONCER MÁS</h2>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="imagen_serv">
-                    <img src="./imagenes/Impresion3D.png" alt="Impresion 3D">
-                </div>
-            </div>
-
-        </div>
-
-    </main>
+    <h1>CORTADORA LASER</h1>
+    <div class="container" id="cortadoralaser">
+    </div>
 
     <footer>
         <div id="footer_link">
@@ -192,7 +110,36 @@
             </div>
         </div>
     </footer>
+    <script>
+    const corte_laser = [
+        {id:2, nombre:"Corte laser", imagen:"./imagenes/lc_1.jpg"},
+        {id:3, nombre:"Corte laser", imagen:"./imagenes/lc_2.jpg"},
+        {id:1, nombre:"Corte laser", imagen:"./imagenes/lc_3.jpg"},
+        {id:4, nombre:"Corte laser", imagen:"./imagenes/lc_4.jpg"},
+        {id:5, nombre:"Corte laser", imagen:"./imagenes/lc_5.jpg"},
+        {id:6, nombre:"Corte laser", imagen:"./imagenes/lc_6.jpg"},
+        {id:7, nombre:"Corte laser", imagen:"./imagenes/lc_7.jpg"},
+        {id:8, nombre:"Corte laser", imagen:"./imagenes/lc_8.jpg"},
+        {id:9, nombre:"Corte laser", imagen:"./imagenes/lc_9.jpg"}
+    ]
+  
+    const cl_imagenes= document.getElementById('cortadoralaser')
+
+    corte_laser.forEach(item => {
+        cl_imagenes.innerHTML +=
+    `
+        <div class="gallery-conatiner">
+            <div class="gallery-item">
+                <div class="image">
+                    <img src="${item.imagen}" alt="${item.nombre}">
+                </div>
+            </div>
+        </div>
+    ` 
+    })
+  
+
+    </script>
     <script src="main.js"></script>
 </body>
-
 </html>
