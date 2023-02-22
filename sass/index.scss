@@ -74,6 +74,7 @@ $logo_height: 5.313rem;
         font-size: 2.5rem;
         color: $color_darkRed;
     }
+   
 
     #tarjetas {
         margin-top: 2rem;
@@ -82,21 +83,35 @@ $logo_height: 5.313rem;
         padding: 2rem;
         align-items: center;
         justify-content: center;
-
+        
         #sublimacion {
             background-image: url("./imagenes/sublimacion.png");
+           
+                object-fit: cover;
+                
+                transition: .5s ease-in-out;
         }
 
         #diseñoGrafico {
             background-image: url("./imagenes/graphicdesing.png");
+            object-fit: cover;
+                
+                transition: .5s ease-in-out;
         }
 
         #cortadoralaser {
             background-image: url("./imagenes/lasercut.png");
+            object-fit: cover;
+                
+                transition: .5s ease-in-out;
         }
 
         #impresion3D {
             background-image: url("./imagenes/Impresion3D.png");
+            object-fit: cover;
+                
+                transition: .5s ease-in-out;
+            
         }
 
         .tarjeta {
@@ -112,6 +127,7 @@ $logo_height: 5.313rem;
             align-items: center;
             justify-content: center;
 
+           
             #descripcion {
                 display: none;
 
@@ -131,8 +147,9 @@ $logo_height: 5.313rem;
 
 
         .tarjeta:hover {
-            background-color: rgba(194, 130, 130, 0.863);
-
+            
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            transform: scale(1.1);
             #descripcion {
                 display: flex;
 
@@ -191,12 +208,13 @@ $logo_height: 5.313rem;
         align-items: center;
         justify-content: center;
         padding-left: 0rem;
+        
 
         h2 {
-            font-family: $font_Oswald;
+           font-family: $font_Oswald;
             font-size: 3.8rem;
             padding-bottom: 2rem;
-
+            text-align: center;
             color: rgb(13, 13, 13);
 
             b {
@@ -205,10 +223,12 @@ $logo_height: 5.313rem;
                 color: $color_darkRed;
                 letter-spacing: .2rem;
             }
+            
+        
         }
 
     }
-
+   
 }
 
 
