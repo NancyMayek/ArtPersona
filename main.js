@@ -54,12 +54,30 @@ function calcularCantidad(id, cantidad, precio){
   let unidad_precio = cantidad * precio;
   const item_precio = document.getElementById(id);
   item_precio.innerHTML= "$"+ unidad_precio;
+  
 }
 
+function calcularTotal(){
+  
+  const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
+  if(cartItems.length === 0){
+    precio_total.innerHTML="No hay productos en el carrito";
+  }
+  var totalPrice=0;
+  cartItems.forEach(item => {
+  const precio_total = document.getElementById('precio_total');
+    totalPrice += item.price * item.quantity;
+    precio_total.innerHTML= "$"+totalPrice;
+  });
+}
 
 function añadir_carrito(){
  const cartDiv = document.getElementById('productos_carrito');
   const cartItems = JSON.parse(localStorage.getItem('cart') || '[]');
+  const precio_total = document.getElementById('precio_total');
+  if(cartItems.length === 0){
+    precio_total.innerHTML="No hay productos en el carrito";
+  }
   cartDiv.innerHTML=""; 
  
   cartItems.forEach(item => {
@@ -77,7 +95,7 @@ function añadir_carrito(){
                     <h3 id="cantidad_${item.id}">${item.quantity}</h3>
                 </div>
                 <h3 id="precio_${item.id}">$${item.price}</h3>
-                <button  onclick="borrarItem()" class="btn_borrar" id="btn_borrar_${item.id}">Borrar</button>
+                <button class="btn_borrar" id="btn_borrar_${item.id}">Borrar</button>
             </div>
     `
   });
@@ -98,13 +116,17 @@ function añadir_carrito(){
       item_cantidad.innerHTML=item.quantity;
       localStorage.setItem('cart', JSON.stringify(cartItems));
       calcularCantidad('precio_'+item.id,item.quantity,item.price);
+      calcularTotal();
     });
 
     subButton.addEventListener('click', () => {
+      if(item.quantity>1){
       item.quantity--;
       item_cantidad.innerHTML=item.quantity;
       localStorage.setItem('cart', JSON.stringify(cartItems));
       calcularCantidad('precio_'+item.id,item.quantity,item.price);
+      calcularTotal();
+      }
     });
 
 
@@ -115,12 +137,15 @@ function añadir_carrito(){
         localStorage.setItem('cart', JSON.stringify(cartItems));
         carrito_div.remove();
       }
+      calcularTotal();
     });
 
-
+    
     
     calcularCantidad('precio_'+item.id,item.quantity,item.price);
+    calcularTotal();
   });
+
 }
 
 
